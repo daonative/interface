@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+body > div:first-child,
+div#__next,
+div#__next > div {
+  height: 100%;
+}
+
+.magic-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .magic-grid {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+  }
+
+  ul > li:before {
+    margin-right: 8px;
+    width: 1.3rem;
+  }
+}
+@media (min-width: 1536px) {
+  .magic-grid {
+    grid-template-rows: 1fr 3fr;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+}
+h1 {
+  line-height: 110%;
+  font-size: clamp(2.2rem, 4.9vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(1rem, 1.1vw, 2.1rem);
+  font-family: Archivo;
+}
+h3 {
+  font-size: clamp(1.4rem, 1.5vw, 3rem);
+}
+
+body {
+  margin: 0;
+  font-family:"Archivo", sans-serif;
+  font-feature-settings: "liga" off;
+  font-size: clamp(0.9rem, 1vw, 1.4rem);
+}
+
+p,
+ li {
+  font-family: "Archivo", sans-serif;
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  font-weight: 300;
+}
+
+
+
+small {
+  font-family: "Archivo", sans-serif;
+}
+
+.bluebar::after {
+  content: "";
+  height: 2px;
+  bottom: -8%;
+  left: -5%;
+  position: absolute;
+  width: 0%;
+  background-color: #1d33f5;
+  animation: stretchwidth 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1300ms;
+}
+
+.animate-underline {
+  position: relative;
+  font-family: inherit;
+}
+.animate-underline:after {
+  content: "";
+  height: 10%;
+  bottom: 1%;
+  left: 0;
+  display: flex;
+  position: absolute;
+  width: 0%;
+  background-color: #1d33f5;
+  z-index: -1;
+  animation: stretchwidth 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1300ms;
+}
+
+@keyframes stretchwidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 110%;
+  }
+}

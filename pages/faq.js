@@ -1,0 +1,129 @@
+import { Disclosure } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/outline";
+
+import { Card } from "../components/Card";
+import { FilmNoise, Gradient } from "../components/Gradient";
+import { Nav } from "../components/Nav";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+const faqs = [
+  {
+    id: 1,
+    question: "How much will I earn?",
+    answer: (
+      <div>
+        The short answer is that you will earn anywhere between 0 and the total
+        locked value in a given call for article.
+      </div>
+    ),
+  },
+  {
+    id: 2,
+    question: "How can I participate?",
+    answer: (
+      <ol className="list-decimal list-inside">
+        <li>Join our discord.</li>
+        <li>Introduce yourself in the #intro channel on discord.</li>
+        <li>
+          Write your article and add the{" "}
+          <span className="underline">prologe writer verification link </span>at
+          the end of your article.
+          <br />
+          The link should be formatted as such: <br />
+          <a href="" className="text-prologe-primary">
+            https://prologe.press/writer/
+          </a>{" "}
+          + <span className="text-prologe-primary"> eth address. </span>
+          <br />
+        </li>
+        <li>
+          We verify entries manually so it can take up to 24h for you to get a
+          confirmation that we reviewed your article.
+        </li>
+        <li>
+          After the votes are done. we will send the funds directly to your
+          address.
+        </li>
+      </ol>
+    ),
+  },
+  // More questions...
+];
+const Background = () => {
+  return (
+    <FilmNoise className="fixed top-0 ">
+      <Gradient />
+      <div
+        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed right-1/4 top-0`}
+      ></div>
+      <div
+        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed left-1/4 top-0`}
+      ></div>
+    </FilmNoise>
+  );
+};
+
+export default function FAQ() {
+  return (
+    <div className="relative subpixel-antialiased ">
+      <Background />
+
+      <div className="relative h-full grid gap-y-4 md:grid-rows-6 md:grid-cols-16 md:py-14">
+        <div
+          className={`md:col-start-1 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+        >
+          <Nav />
+        </div>
+        <div
+          className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 md:row-end-2`}
+        >
+          <Card>
+            <div>
+              <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+                <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                  <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Frequently asked questions
+                  </h2>
+                  <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+                    {faqs.map((faq) => (
+                      <Disclosure as="div" key={faq.question} className="pt-6">
+                        {({ open }) => (
+                          <>
+                            <dt className="text-lg">
+                              <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                                <span className="font-medium text-gray-900">
+                                  {faq.question}
+                                </span>
+                                <span className="ml-6 h-7 flex items-center">
+                                  <ChevronDownIcon
+                                    className={classNames(
+                                      open ? "-rotate-180" : "rotate-0",
+                                      "h-6 w-6 transform"
+                                    )}
+                                    aria-hidden="true"
+                                  />
+                                </span>
+                              </Disclosure.Button>
+                            </dt>
+                            <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                              <p className="text-base text-gray-500">
+                                {faq.answer}
+                              </p>
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}

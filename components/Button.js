@@ -17,7 +17,7 @@ const FilledButton = ({ className, children }) => {
 const OutlineButton = ({ className, children }) => {
   return (
     <StyledButton
-      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4 block ${className} cursor-pointer hover:bg-prologe-primary hover:text-white`}
+      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4  ${className} cursor-pointer hover:bg-prologe-primary hover:text-white`}
     >
       {children}
     </StyledButton>

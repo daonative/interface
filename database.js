@@ -28,7 +28,6 @@ export const callForArticles = [
       .digest("hex"),
     valueLocked: 0.027,
     deadline: new Date("2021-08-21"),
-    cta: "https://discord.gg/xaz5xSwGqZ",
     articles,
     description: `            <div>
               <p >Create an article explaining:</p>

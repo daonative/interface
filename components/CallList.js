@@ -14,8 +14,8 @@ export const CallList = () => {
         <ul role="list " className=" divide-y-2 divide-prologe-primary ">
           {callForArticles.reverse().map((call) => {
             return (
-              <Card className="mb-2">
-                <Link key={call.id} href={`/call/${call.id}`}>
+              <Card key={call.id} className="mb-2">
+                <Link href={`/call/${call.id}`}>
                   <li className="cursor-pointer">
                     <div >
                       <CallSummary

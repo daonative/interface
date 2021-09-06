@@ -1,5 +1,6 @@
 export const proposalList = {
   0: {
+    answerToCallId: "bf6f3e99122d817fd0a5bfedc40217008d4352c5",
     sponsors: [
       {
         sponsorAddress: "0x9890Ec25415912b2D8628C385daCA509650882bD",
@@ -18,6 +19,7 @@ export const proposalList = {
       "https://fringe-cloth-384.notion.site/What-is-prologe-press-11a7fbce871d4dc0a3f03b388196dd9e",
   },
   1: {
+    answerToCallId: "bf6f3e99122d817fd0a5bfedc40217008d4352c5",
     createdAt: 1629670322530,
     image: "/prologewhitetile.png",
     claimable: "0.003999999999999999",

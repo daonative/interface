@@ -8,6 +8,7 @@ import { CallDescription } from "../../components/CallDescription";
 import { Nav } from "../../components/Nav";
 import { callForArticles } from "../../data/callList";
 import { proposalList } from "../../data/proposalList";
+import { SponsorList } from "../../components/SponsorList";
 
 const Background = () => {
   return (
@@ -22,7 +23,6 @@ const Background = () => {
     </div>
   );
 };
-
 const Calls = () => {
   const router = useRouter();
   const { cid } = router.query;
@@ -49,13 +49,15 @@ const Calls = () => {
           </Card>
           <CallDescription className="mb-3" description={call?.description} />
           <AnswerList
+            className="mb-3"
             articles={call?.proposals?.map(
               (proposalId) => proposalList?.[proposalId]
             )}
           />
         </div>
-        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8 ">
+        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
           <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+          <SponsorList className="mb-3" sponsors={call?.sponsors} />
         </div>
       </div>
     </div>

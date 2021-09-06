@@ -40,6 +40,11 @@ export const callForArticles = [
       "A complete guide of hiring in DeFi: employee vs freelance vs grant distribution",
     valueLocked: 0.025,
     deadline: new Date("2021-09-22"),
+    sponsors: {
+      "prologe": {
+        balance: 0.05,
+      },
+    },
   },
   {
     id: crypto
@@ -47,6 +52,11 @@ export const callForArticles = [
       .update("Crypto and the unbanked")
       .digest("hex"),
     title: "Crypto and the unbanked",
+    sponsors: {
+      "prologe": {
+        balance: 0.05,
+      },
+    },
     description: `
         <p>
           Crypto has long been pretending to bank the unbanked. It would be nice
@@ -72,6 +82,11 @@ export const callForArticles = [
     title: "Top 100 DeFi projects + mapping",
     valueLocked: "0.020",
     deadline: new Date("2021-09-22"),
+    sponsors: {
+      "prologe": {
+        balance: 0.015,
+      },
+    },
   },
   {
     id: crypto
@@ -79,6 +94,11 @@ export const callForArticles = [
       .update("Censorship resistant information guide")
       .digest("hex"),
     title: "Censorship resistant information guide",
+    sponsors: {
+      "prologe": {
+        balance: 0.015,
+      },
+    },
     valueLocked: "0.015",
     deadline: new Date("2021-09-30"),
     description: `

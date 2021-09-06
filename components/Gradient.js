@@ -57,7 +57,8 @@ export const FilmNoise = styled.div`
 export const Gradient = styled.div`
   height: 100%;
   width: 100%;
-  background-size: stretch;
+  background-position: center center;
+  background-size: contain;
   background-image: url(/mobile-gradient.svg);
   background-repeat: no-repeat;
   position: absolute;

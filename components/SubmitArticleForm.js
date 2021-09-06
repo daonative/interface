@@ -46,7 +46,7 @@ export const SubmitArticleForm = ({ id, title, className }) => {
           <input type="hidden" name="callTitle" value={title} />
           <label
             htmlFor="articleURL"
-            class="block text-sm font-medium text-gray-600 font-archivo"
+            class="block text-sm font-medium text-gray-600 "
           >
             Article Link
           </label>

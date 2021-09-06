@@ -30,9 +30,7 @@ export const Headline = () => {
         </h1>
         <h2 className="mb-2">Let's change the way information gets funded.</h2>
         <h2>
-          <span style={{ fontFamily: "Archivo" }} className="font-bold mb-2">
-            {`How it works`}
-          </span>
+          <span className="font-bold mb-2">{`How it works`}</span>
           <ol className="list-decimal list-inside">
             <>
               <li>Browse calls for articles</li>

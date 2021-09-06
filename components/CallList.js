@@ -11,10 +11,13 @@ export const CallList = () => {
         <div className="mb-3 flex justify-between items-center">
           <Header>Latest calls for articles</Header>
         </div>
-        <ul role="list " className=" divide-y-2 divide-prologe-primary ">
+        <ul role="list ">
           {callForArticles.reverse().map((call) => {
             return (
-              <Card key={call.id} className="mb-2">
+              <Card
+                key={call.id}
+                className="mb-2 border-t-2 border-prologe-primary"
+              >
                 <Link href={`/call/${call.id}`}>
                   <li className="cursor-pointer">
                     <div>

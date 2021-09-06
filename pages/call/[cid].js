@@ -49,7 +49,9 @@ const Calls = () => {
           </Card>
           <CallDescription className="mb-3" description={call?.description} />
           <AnswerList
-            articles={call?.proposals.map((proposalId) => proposalList[proposalId])}
+            articles={call?.proposals?.map(
+              (proposalId) => proposalList?.[proposalId]
+            )}
           />
         </div>
         <div className="md:col-start-13 md:col-end-17 px-0 md:px-8 ">

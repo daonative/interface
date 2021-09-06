@@ -11,13 +11,13 @@ export const CallList = () => {
         <div className="mb-3 flex justify-between items-center">
           <Header>Latest calls for articles</Header>
         </div>
-        <Card>
-          <ul role="list " className=" divide-y-2 divide-prologe-primary">
-            {callForArticles.reverse().map((call) => {
-              return (
+        <ul role="list " className=" divide-y-2 divide-prologe-primary ">
+          {callForArticles.reverse().map((call) => {
+            return (
+              <Card className="mb-2">
                 <Link key={call.id} href={`/call/${call.id}`}>
                   <li className="cursor-pointer">
-                    <div className="mt-3 mb-3">
+                    <div >
                       <CallSummary
                         title={call.title}
                         valueLocked={call.valueLocked}
@@ -27,10 +27,10 @@ export const CallList = () => {
                     </div>
                   </li>
                 </Link>
-              );
-            })}
-          </ul>
-        </Card>
+              </Card>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

@@ -34,6 +34,10 @@ const ValueLocked = ({ valueLocked }) => {
 };
 
 export const CallSummary = ({ title, valueLocked, deadline, className }) => {
+  const isInThePast = (firstDate) =>
+    firstDate.setHours(0, 0, 0, 0) <= new Date().setHours(0, 0, 0, 0);
+
+  const isClosed = isInThePast(deadline);
   return (
     <div className={className}>
       <div className="flex flex-col">
@@ -45,12 +49,11 @@ export const CallSummary = ({ title, valueLocked, deadline, className }) => {
           <div className="border-t-prologe border-prologe-primary border-opacity-25 w-full col-start-1 col-end-6 ">
             <Deadline deadline={deadline} />
           </div>
-          <div className="border-t-prologe border-l-prologe border-prologe-primary border-opacity-25"></div>
+          <div className="border-t-prologe border-l-prologe border-prologe-primary border-opacity-25 flex justify-center items-center bg-prologe-light text-prologe-primary">
+            {isClosed ? "closed" : "open"}
+          </div>
         </section>
       </div>
     </div>
   );
 };
-
-
-

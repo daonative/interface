@@ -12,7 +12,7 @@ export const CallList = () => {
           <Header>Latest calls for articles</Header>
         </div>
         <ul role="list ">
-          {callForArticles.reverse().map((call) => {
+          {callForArticles.map((call) => {
             return (
               <Card
                 key={call.id}

@@ -2,33 +2,6 @@ const crypto = require("crypto");
 
 export const callForArticles = [
   {
-    sponsors: {
-      "0x9890Ec25415912b2D8628C385daCA509650882bD": {
-        balance: 0.07,
-      },
-      "0x69F5Bd7021858C3270A43aD7D719c6164CA6D174": {
-        balance: 0.02,
-      },
-    },
-    title: "What is prologe.press?",
-    id: crypto
-      .createHash("sha1")
-      .update("What is prologe.press`?")
-      .digest("hex"),
-    valueLocked: 0.027,
-    deadline: new Date("2021-08-21"),
-    proposals: [0, 1],
-    description: `            <div>
-              <p >Create an article explaining:</p>
-              <ul>
-                <li>what prologe.press is</li>
-                <li>who prologe.press is for</li>
-                <li>what problem prologe.press solves </li>
-              </ul>
-            </div>
- `,
-  },
-  {
     id: crypto
       .createHash("sha1")
       .update(
@@ -41,7 +14,7 @@ export const callForArticles = [
     valueLocked: 0.025,
     deadline: new Date("2021-09-22"),
     sponsors: {
-      "prologe": {
+      prologe: {
         balance: 0.05,
       },
     },
@@ -53,7 +26,7 @@ export const callForArticles = [
       .digest("hex"),
     title: "Crypto and the unbanked",
     sponsors: {
-      "prologe": {
+      prologe: {
         balance: 0.05,
       },
     },
@@ -83,7 +56,7 @@ export const callForArticles = [
     valueLocked: "0.020",
     deadline: new Date("2021-09-22"),
     sponsors: {
-      "prologe": {
+      prologe: {
         balance: 0.015,
       },
     },
@@ -95,7 +68,7 @@ export const callForArticles = [
       .digest("hex"),
     title: "Censorship resistant information guide",
     sponsors: {
-      "prologe": {
+      prologe: {
         balance: 0.015,
       },
     },
@@ -109,5 +82,32 @@ export const callForArticles = [
         <li>server-level (public cloud at google/amazon)</li>
         <li>domain-Level (domain providers)</li>
     `,
+  },
+  {
+    sponsors: {
+      "0x9890Ec25415912b2D8628C385daCA509650882bD": {
+        balance: 0.07,
+      },
+      "0x69F5Bd7021858C3270A43aD7D719c6164CA6D174": {
+        balance: 0.02,
+      },
+    },
+    title: "What is prologe.press?",
+    id: crypto
+      .createHash("sha1")
+      .update("What is prologe.press`?")
+      .digest("hex"),
+    valueLocked: 0.027,
+    deadline: new Date("2021-08-21"),
+    proposals: [0, 1],
+    description: `            <div>
+              <p >Create an article explaining:</p>
+              <ul>
+                <li>what prologe.press is</li>
+                <li>who prologe.press is for</li>
+                <li>what problem prologe.press solves </li>
+              </ul>
+            </div>
+ `,
   },
 ];

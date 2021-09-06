@@ -46,16 +46,16 @@ export const SubmitArticleForm = ({ id, title, className }) => {
           <input type="hidden" name="callTitle" value={title} />
           <label
             htmlFor="articleURL"
-            class="block text-sm font-medium text-gray-600 "
+            className="block text-sm font-medium text-gray-600 "
           >
             Article Link
           </label>
-          <div class="mt-1 flex rounded-md shadow-sm mb-3">
+          <div className="mt-1 flex rounded-md shadow-sm mb-3">
             <input
               type="url"
               pattern="https://.*"
               name="articleURL"
-              class="flex-1 min-w-0 block w-full px-3 py-2 focus:ring-prologe-primary focus:border-prologe-primary sm:text-sm border-prologe-light"
+              className="flex-1 min-w-0 block w-full px-3 py-2 focus:ring-prologe-primary focus:border-prologe-primary sm:text-sm border-prologe-light"
               placeholder="Enter the link to your article"
             />
           </div>

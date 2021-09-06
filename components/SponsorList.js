@@ -22,7 +22,7 @@ export const SponsorList = ({ className, sponsors = {} }) => {
         <ul className="divide-y divide-opacity-25 divide-prologe-primary">
           {Object.entries(sponsors).map(([address, sponsorData]) => {
             return (
-              <li className=" pt-4 pb-4 flex justify-between">
+              <li key={address} className="pt-4 pb-4 flex justify-between">
                 <div>
                   <Image width="12" height="12" src="/ethereum-icon.svg" />
                   {sponsorData.balance}

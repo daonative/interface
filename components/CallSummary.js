@@ -37,7 +37,7 @@ export const CallSummary = ({ title, valueLocked, deadline, className }) => {
   const isInThePast = (firstDate) =>
     firstDate.setHours(0, 0, 0, 0) <= new Date().setHours(0, 0, 0, 0);
 
-  const isClosed = isInThePast(deadline);
+  const isClosed = deadline && isInThePast(deadline);
   return (
     <div className={className}>
       <div className="flex flex-col">

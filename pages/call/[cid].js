@@ -1,12 +1,13 @@
 import { useRouter } from "next/dist/client/router";
 import { Card } from "../../components/Card";
-import { callForArticles } from "../../database";
 import { Gradient } from "../../components/Gradient";
 import { CallSummary } from "../../components/CallSummary";
 import { AnswerList } from "../../components/AnswerList";
 import { SubmitArticleForm } from "../../components/SubmitArticleForm";
 import { CallDescription } from "../../components/CallDescription";
 import { Nav } from "../../components/Nav";
+import { callForArticles } from "../../data/callList";
+import { proposalList } from "../../data/proposalList";
 
 const Background = () => {
   return (
@@ -47,7 +48,9 @@ const Calls = () => {
             />
           </Card>
           <CallDescription className="mb-3" description={call?.description} />
-          <AnswerList articles={call?.articles} />
+          <AnswerList
+            articles={call?.proposals.map((proposalId) => proposalList[proposalId])}
+          />
         </div>
         <div className="md:col-start-13 md:col-end-17 px-0 md:px-8 ">
           <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />

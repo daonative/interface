@@ -1,8 +1,8 @@
-import { callForArticles } from "../database";
 import Link from "next/link";
 import { Header } from "./Header";
 import { Card } from "./Card";
 import { CallSummary } from "./CallSummary";
+import { callForArticles } from "../data/callList";
 
 export const CallList = () => {
   return (
@@ -17,7 +17,7 @@ export const CallList = () => {
               <Card key={call.id} className="mb-2">
                 <Link href={`/call/${call.id}`}>
                   <li className="cursor-pointer">
-                    <div >
+                    <div>
                       <CallSummary
                         title={call.title}
                         valueLocked={call.valueLocked}

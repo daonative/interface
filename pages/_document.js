@@ -36,38 +36,8 @@ export default class MyDocument extends Document {
             data-domain="prologe.press"
             src="https://plausible.io/js/plausible.js"
           />
-          <meta
-            name="title"
-            content="Prologe | Get paid to write about crypto"
-          />
-          <meta
-            name="description"
-            content="Complete content bounties about crypto to earn crypto."
-          />
-
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://www.prologe.press/" />
-          <meta
-            property="og:title"
-            content="Prologe | Get paid to write about crypto"
-          />
-          <meta
-            property="og:description"
-            content="Complete content bounties about crypto to earn crypto."
-          />
           <meta property="og:image" content="/prologe-seo.png" />
-
-          <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://www.prologe.press/" />
-          <meta
-            property="twitter:title"
-            content="Prologe | Get paid to write about crypto"
-          />
-          <meta
-            property="twitter:description"
-            content="Complete content bounties about crypto to earn crypto."
-          />
-          <meta property="twitter:image" content="/prologe-seo.png"></meta>
+          <meta property="twitter:image" content="/prologe-seo.png" />
         </Head>
         <body>
           <Main />

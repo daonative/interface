@@ -6,6 +6,7 @@ import { AnimatedLogo } from "../components/AnimatedLogo";
 import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import styled from "styled-components";
+import { NextSeo } from "next-seo";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -57,10 +58,10 @@ const LandingNav = () => (
 export default function Companies() {
   return (
     <>
-      <Head>
-        <title>prologe.press | Content bounties made easy</title>
-        <meta name="title" content="Prologe | Content boounties made easy" />
-      </Head>
+      <NextSeo
+        title="prologe.press | Content bounties made easy"
+        description="Get the word out about your product using content bounties"
+      />
       <div className="relative subpixel-antialiased ">
         {
           // LeftPane

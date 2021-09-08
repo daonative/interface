@@ -9,6 +9,7 @@ import { Nav } from "../../components/Nav";
 import { callForArticles } from "../../components/data/callList";
 import { proposalList } from "../../components/data/proposalList";
 import { SponsorList } from "../../components/SponsorList";
+import { NextSeo } from "next-seo";
 
 const Background = () => {
   return (
@@ -23,46 +24,72 @@ const Background = () => {
     </div>
   );
 };
-const Calls = () => {
-  const router = useRouter();
-  const { cid } = router.query;
-  const call = callForArticles.find((call) => call.id === cid);
-  if (!call) return "Page Not Found";
+const Calls = ({ call }) => {
+  const cid = call?.id;
   return (
-    <div className="relative subpixel-antialiased bg-prologe-white">
-      <Background />
-      <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
-        <div
-          className={`md:col-start-1 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
-        >
-          <Nav />
-        </div>
-        <div
-          className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
-        >
-          <Card className="mb-3">
-            <CallSummary
-              title={call?.title}
-              valueLocked={call?.valueLocked}
-              deadline={call?.deadline}
-              cta={call?.cta}
+    <>
+      <NextSeo
+        title="prologe.press | Get paid to write about crypto"
+        description={call.title}
+      />
+
+      <div className="relative subpixel-antialiased bg-prologe-white">
+        <Background />
+        <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
+          <div
+            className={`md:col-start-1 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+          >
+            <Nav />
+          </div>
+          <div
+            className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
+          >
+            <Card className="mb-3">
+              <CallSummary
+                title={call?.title}
+                valueLocked={call?.valueLocked}
+                deadline={call?.deadline}
+                cta={call?.cta}
+              />
+            </Card>
+            <CallDescription className="mb-3" description={call?.description} />
+            <AnswerList
+              className="mb-3"
+              articles={call?.proposals?.map(
+                (proposalId) => proposalList?.[proposalId]
+              )}
             />
-          </Card>
-          <CallDescription className="mb-3" description={call?.description} />
-          <AnswerList
-            className="mb-3"
-            articles={call?.proposals?.map(
-              (proposalId) => proposalList?.[proposalId]
-            )}
-          />
-        </div>
-        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
-          <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
-          <SponsorList className="mb-3" sponsors={call?.sponsors} />
+          </div>
+          <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
+            <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+            <SponsorList className="mb-3" sponsors={call?.sponsors} />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
+export async function getStaticProps(context) {
+  const { params } = context;
+  const { cid } = params;
+  const call = callForArticles.find((call) => call.id === cid);
+
+  return {
+    props: { call }, // will be passed to the page component as props
+  };
+}
+
+export async function getStaticPaths() {
+  const callIds = callForArticles.map((call) => call.id);
+  return {
+    paths: callIds.map((callId) => ({
+      params: {
+        cid: callId,
+      },
+    })),
+    fallback: false,
+  };
+}
 
 export default Calls;

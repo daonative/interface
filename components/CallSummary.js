@@ -6,9 +6,7 @@ const Deadline = ({ deadline }) => {
 
   return (
     <div className="h-full flex items-center">
-      <div
-        className="font-bold h-full border-r-prologe border-prologe-primary border-opacity-25 flex items-center px-4 md:px-8 py-4"
-      >
+      <div className="font-bold h-full border-r-prologe border-prologe-primary border-opacity-25 flex items-center px-4 md:px-8 py-4">
         Deadline
       </div>
       <div className="ml-3">
@@ -23,16 +21,20 @@ const ValueLocked = ({ valueLocked }) => {
     <div className="flex flex-col items-center">
       <div className="flex items-center justify-between">
         <Image width="12" height="12" src="/ethereum-icon.svg" />
-        <div className="md:ml-1" >
-          {valueLocked}
-        </div>
+        <div className="md:ml-1">{valueLocked}</div>
       </div>
       <div>Locked</div>
     </div>
   );
 };
 
-export const CallSummary = ({ title, valueLocked, deadline, className }) => {
+export const CallSummary = ({
+  title,
+  valueLocked,
+  deadline: unformattedDeadline,
+  className,
+}) => {
+  const deadline = new Date(unformattedDeadline);
   const isInThePast = (firstDate) =>
     firstDate.setHours(0, 0, 0, 0) <= new Date().setHours(0, 0, 0, 0);
 

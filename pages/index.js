@@ -7,6 +7,7 @@ import { AnimatedLogo } from "../components/AnimatedLogo";
 import { CallList } from "../components/CallList";
 import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
+import { NextSeo } from "next-seo";
 
 export const Headline = () => {
   return (
@@ -64,9 +65,10 @@ const LandingNav = () => (
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>prologe.press | Get paid to write about crypto</title>
-      </Head>
+      <NextSeo
+        title="prologe.press | Get paid to write about crypto"
+        description="Complete content bounties about crypto to earn crypto."
+     />
       <div className="relative subpixel-antialiased ">
         {
           // LeftPane

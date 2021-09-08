@@ -12,7 +12,7 @@ export const callForArticles = [
     title:
       "A complete guide of hiring in DeFi: employee vs freelance vs grant distribution",
     valueLocked: 0.025,
-    deadline: new Date("2021-09-22"),
+    deadline: "2021-09-22",
     sponsors: {
       prologe: {
         balance: 0.05,
@@ -45,7 +45,7 @@ export const callForArticles = [
         </ul>
     `,
     valueLocked: 0.05,
-    deadline: new Date("2021-09-22"),
+    deadline: "2021-09-22",
   },
   {
     id: crypto
@@ -54,7 +54,7 @@ export const callForArticles = [
       .digest("hex"),
     title: "Top 100 DeFi projects + mapping",
     valueLocked: "0.020",
-    deadline: new Date("2021-09-22"),
+    deadline: "2021-09-22",
     sponsors: {
       prologe: {
         balance: 0.015,
@@ -73,7 +73,7 @@ export const callForArticles = [
       },
     },
     valueLocked: "0.015",
-    deadline: new Date("2021-09-30"),
+    deadline: "2021-09-30",
     description: `
         At which levels can your article/information on the internet get
         censored? For example:
@@ -98,7 +98,7 @@ export const callForArticles = [
       .update("What is prologe.press`?")
       .digest("hex"),
     valueLocked: 0.027,
-    deadline: new Date("2021-08-21"),
+    deadline: "2021-08-21",
     proposals: [0, 1],
     description: `            <div>
               <p >Create an article explaining:</p>

@@ -58,7 +58,8 @@ export default function Companies() {
   return (
     <>
       <Head>
-        <title>prologe.press | Easy crypto content bounties</title>
+        <title>prologe.press | Content bounties made easy</title>
+        <meta name="title" content="Prologe | Content boounties made easy" />
       </Head>
       <div className="relative subpixel-antialiased ">
         {

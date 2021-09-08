@@ -36,7 +36,6 @@ export default class MyDocument extends Document {
             data-domain="prologe.press"
             src="https://plausible.io/js/plausible.js"
           />
-          <title>Prologe | Get paid to write about crypto</title>
           <meta
             name="title"
             content="Prologe | Get paid to write about crypto"

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "./Header";
 import { Card } from "./Card";
 import { CallSummary } from "./CallSummary";
-import { callForArticles } from "../data/callList";
+import { callForArticles } from "./data/callList";
 
 export const CallList = () => {
   return (

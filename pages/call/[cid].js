@@ -6,8 +6,8 @@ import { AnswerList } from "../../components/AnswerList";
 import { SubmitArticleForm } from "../../components/SubmitArticleForm";
 import { CallDescription } from "../../components/CallDescription";
 import { Nav } from "../../components/Nav";
-import { callForArticles } from "../../data/callList";
-import { proposalList } from "../../data/proposalList";
+import { callForArticles } from "../../components/data/callList";
+import { proposalList } from "../../components/data/proposalList";
 import { SponsorList } from "../../components/SponsorList";
 
 const Background = () => {
@@ -27,6 +27,7 @@ const Calls = () => {
   const router = useRouter();
   const { cid } = router.query;
   const call = callForArticles.find((call) => call.id === cid);
+  if (!call) return "Page Not Found";
   return (
     <div className="relative subpixel-antialiased bg-prologe-white">
       <Background />

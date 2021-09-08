@@ -36,32 +36,39 @@ export default class MyDocument extends Document {
             data-domain="prologe.press"
             src="https://plausible.io/js/plausible.js"
           />
+          <title>Prologe | Get paid to write about crypto</title>
           <meta
             name="title"
-            content="prologe.press | Earn money while supporting creators"
+            content="Prologe | Get paid to write about crypto"
           />
           <meta
             name="description"
-            content="Decentralized publishing platform where writers' and readers' interests are aligned. Readers request & vote on topics. Writers compete on topics to get funding."
+            content="Complete content bounties about crypto to earn crypto."
           />
 
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.prologe.press/" />
-          <meta property="og:title" content="prologe.press " />
+          <meta
+            property="og:title"
+            content="Prologe | Get paid to write about crypto"
+          />
           <meta
             property="og:description"
-            content="Decentralized publishing platform where writers' and readers' interests are aligned. Readers request & vote on topics. Writers compete on topics to get funding."
+            content="Complete content bounties about crypto to earn crypto."
           />
           <meta property="og:image" content="/prologe-seo.png" />
 
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://www.prologe.press/" />
-          <meta property="twitter:title" content="prologe.press" />
+          <meta
+            property="twitter:title"
+            content="Prologe | Get paid to write about crypto"
+          />
           <meta
             property="twitter:description"
-            content="Decentralized publishing platform where writers' and readers' interests are aligned. Readers request & vote on topics. Writers compete on topics to get funding."
+            content="Complete content bounties about crypto to earn crypto."
           />
-          <meta property="twitter:image" content="/prologe-seo.png" />
+          <meta property="twitter:image" content="/prologe-seo.png"></meta>
         </Head>
         <body>
           <Main />

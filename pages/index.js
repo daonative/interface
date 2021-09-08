@@ -1,9 +1,57 @@
 import Head from "next/head";
+
+import Link from "next/link";
 import { Gradient } from "../components/Gradient";
 import { AnimatedLogo } from "../components/AnimatedLogo";
 
 import { CallList } from "../components/CallList";
-import { Headline } from "../components/Headline";
+import { StyledMain } from "../components/StyledMain";
+import Button from "../components/Button";
+
+export const Headline = () => {
+  return (
+    <StyledMain>
+      <main className="mt-auto md:mt-0">
+        <h1
+          className="mb-6"
+          style={{ fontFamily: "Space Grotesk", fontWeight: 600 }}
+        >
+          Get paid to write about crypto
+          <span className="text-sm absolute text-red-500 font-normal">
+            closed beta
+          </span>
+          <br />
+        </h1>
+        <h2 className="mb-2">Let's change the way information gets funded.</h2>
+        <h2>
+          <span className="font-bold mb-2">{`How it works`}</span>
+          <ol className="list-decimal list-inside">
+            <>
+              <li>Browse calls for articles</li>
+              <li>
+                Publish it on <i>any</i> platform
+              </li>
+              <li>Submit a link to your article on prologe</li>
+              <li>Earn crypto proportional to votes and locked value </li>
+            </>
+          </ol>
+        </h2>
+        <div className="flex">
+          <a target="_blank" href="https://discord.gg/zGk5TSSyjX">
+            <Button className="mt-6">Get Early Access</Button>
+          </a>
+          <Link href="/faq">
+            <a>
+              <Button type="outline" className="mt-6 ml-3">
+                FAQ
+              </Button>
+            </a>
+          </Link>
+        </div>
+      </main>
+    </StyledMain>
+  );
+};
 
 const LandingNav = () => (
   <nav>
@@ -17,7 +65,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>prologe.press | Invest in crypto content</title>
+        <title>prologe.press | Get paid to write about crypto</title>
       </Head>
       <div className="relative subpixel-antialiased ">
         {

@@ -4,6 +4,58 @@ export const callForArticles = [
   {
     id: crypto
       .createHash("sha1")
+      .update("How to make quality crypto content?")
+      .digest("hex"),
+    valueLocked: 0.2,
+    deadline: "2021-10-01",
+    abstractDeadline: "2021-09-25",
+    wordCount: "250 - 1000",
+    title: "How to make quality crypto content?",
+    sponsors: {
+      prologe: {
+        balance: 0.2,
+      },
+    },
+    description: `
+      <div>
+       <div>
+          <p class="mb-3">
+            We're building a community of crypto writers. Help the community
+            strive for the best by answering the following questions:
+          </p>
+        </div>
+        <div>
+          <ul>
+            <li data-line="0">
+              <p>Writing about crypto: what's so hard about it?</p>
+            </li>
+            <li data-line="2">
+              <p>What does it mean to write quality content?</p>
+            </li>
+            <li data-line="4">
+              <p>What are the common mistakes that people make?</p>
+            </li>
+            <li data-line="6">
+              <p>Examples of bad quality vs. good quality?</p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <p class="mt-3">
+            At prologe.press, we aim for quality over quantity. So if you
+            believe someone else covered some of these topics well in their
+            writing, give them their just dues and link to them.
+          </p>
+          <p class="mt-3">
+          Your primary focus should be to answer the call. You don't necessarily need to answer all the questions listed here above.
+          </p>
+        </div>
+      </div>
+    `,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
       .update(
         "A complete guide of hiring in DeFi: employee vs freelance vs grant distribution"
       )
@@ -110,4 +162,5 @@ export const callForArticles = [
             </div>
  `,
   },
+  ,
 ];

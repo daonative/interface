@@ -19,7 +19,7 @@ export const AnswerList = ({ articles, className }) => {
             return <Answer key={index} id={index} article={article} />;
           })
         ) : (
-          <div>No Answers at the moment</div>
+          <div>No answers at the moment</div>
         )}
       </ul>
     </Card>

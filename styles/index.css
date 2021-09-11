@@ -49,11 +49,11 @@ h3 {
   font-size: clamp(1.4rem, 1.5vw, 3rem);
 }
 
-body {
+body, element {
   margin: 0;
   font-family:"Archivo", sans-serif;
   font-feature-settings: "liga" off;
-  font-size: clamp(0.9rem, 1vw, 1.4rem);
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
 }
 
 p,

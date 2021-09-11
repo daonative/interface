@@ -25,30 +25,31 @@ const Background = () => {
     </div>
   );
 };
+
 const Calls = ({ call }) => {
   const cid = call?.id;
   return (
     <>
       <NextSeo
         title={`${call?.title} | prologe.press`}
-        description={call?.description}
+        description={call?.description?.replace(/<[^>]*>?/gm, "")}
         openGraph={{
-          url: 'https://prologe.press',
+          url: "https://prologe.press",
           title: `${call?.title} | prologe.press`,
-          description: call?.description ,
+          description: call?.description,
           images: [
             {
-              url: 'https://prologe.press/prologe-seo.png',
+              url: "https://prologe.press/prologe-seo.png",
               width: 800,
               height: 600,
-              alt: 'prologe.press logo',
+              alt: "prologe.press logo",
             },
           ],
-          site_name: 'prologe.press',
+          site_name: "prologe.press",
         }}
         twitter={{
-          handle: '@prologe_press',
-          cardType: 'summary_large_image',
+          handle: "@prologe_press",
+          cardType: "summary_large_image",
         }}
       />
 

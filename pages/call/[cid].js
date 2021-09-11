@@ -10,6 +10,7 @@ import { callForArticles } from "../../components/data/callList";
 import { proposalList } from "../../components/data/proposalList";
 import { SponsorList } from "../../components/SponsorList";
 import { NextSeo } from "next-seo";
+import { CallMeta } from "../../components/CallMeta";
 
 const Background = () => {
   return (
@@ -52,6 +53,7 @@ const Calls = ({ call }) => {
                 cta={call?.cta}
               />
             </Card>
+
             <CallDescription className="mb-3" description={call?.description} />
             <AnswerList
               className="mb-3"
@@ -62,6 +64,12 @@ const Calls = ({ call }) => {
           </div>
           <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
             <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+            <CallMeta
+              className="mb-3"
+              abstractDeadline={call?.abstractDeadline}
+              wordCount={call?.wordCount}
+            />
+
             <SponsorList className="mb-3" sponsors={call?.sponsors} />
           </div>
         </div>

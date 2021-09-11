@@ -30,8 +30,8 @@ const Calls = ({ call }) => {
   return (
     <>
       <NextSeo
-        title="prologe.press | Get paid to write about crypto"
-        description={call.title}
+        title={`${call?.title} | prologe.press`}
+        description={call?.description}
       />
 
       <div className="relative subpixel-antialiased bg-prologe-white">

@@ -32,6 +32,24 @@ const Calls = ({ call }) => {
       <NextSeo
         title={`${call?.title} | prologe.press`}
         description={call?.description}
+        openGraph={{
+          url: 'https://prologe.press',
+          title: `${call?.title} | prologe.press`,
+          description: call?.description ,
+          images: [
+            {
+              url: 'https://prologe.press/prologe-seo.png',
+              width: 800,
+              height: 600,
+              alt: 'prologe.press logo',
+            },
+          ],
+          site_name: 'prologe.press',
+        }}
+        twitter={{
+          handle: '@prologe_press',
+          cardType: 'summary_large_image',
+        }}
       />
 
       <div className="relative subpixel-antialiased bg-prologe-white">

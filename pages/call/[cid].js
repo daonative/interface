@@ -28,20 +28,19 @@ const Background = () => {
 
 const Calls = ({ call }) => {
   const cid = call?.id;
+  const description = call?.description?.replace(/<[^>]*>?/gm, "");
   return (
     <>
       <NextSeo
         title={`${call?.title} | prologe.press`}
-        description={call?.description?.replace(/<[^>]*>?/gm, "")}
+        description={description}
         openGraph={{
           url: "https://prologe.press",
           title: `${call?.title} | prologe.press`,
-          description: call?.description,
+          description: description,
           images: [
             {
               url: "https://prologe.press/prologe-seo.png",
-              width: 800,
-              height: 600,
               alt: "prologe.press logo",
             },
           ],

@@ -5,7 +5,7 @@ import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
-import { Nav } from "../components/Nav";
+import { AnimatedLogo } from "../components/AnimatedLogo";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -17,9 +17,9 @@ const H2 = styled.h2`
   font-size: clamp(1rem, 2vw, 4.1rem);
 `;
 
-export const Headline = () => {
+export const Headline = ({ className }) => {
   return (
-    <StyledMain>
+    <StyledMain className={className}>
       <main className="mt-auto md:mt-0">
         <H1 className="mb-6">
           Get access to the best content for your company
@@ -54,6 +54,14 @@ const Background = () => {
   );
 };
 
+const LandingNav = ({ className }) => (
+  <nav className={className}>
+    <div className={`flex justify-between items-center `}>
+      <AnimatedLogo />
+    </div>
+  </nav>
+);
+
 export default function Companies() {
   return (
     <>
@@ -66,12 +74,12 @@ export default function Companies() {
         {
           // LeftPane
         }
-        <div className="relative h-full grid gap-y-4 md:grid-rows-6 md:grid-cols-16 py-6 md:py-14 ">
-          <Nav className="row-start-1 md:col-start-8" />
+        <div className="relative h-full grid md:grid-cols-16 py-6 md:py-14 ">
           <div
-            className={`md:col-start-3 md:col-end-15 row-start-4 md:row-start-3 h-full pt-3 py-6 md:py-14 px-8 md:px-0 magic-grid`}
+            className={`md:col-start-3 md:col-end-15 h-full px-8 md:px-0 magic-grid`}
           >
-            <Headline />
+            <LandingNav />
+            <Headline  />
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Gradient } from "../components/Gradient";
 import { AnimatedLogo } from "../components/AnimatedLogo";
@@ -67,7 +66,7 @@ export default function Home() {
       <NextSeo
         title="prologe.press | Get paid to write about crypto"
         description="Complete content bounties about crypto to earn crypto."
-     />
+      />
       <div className="relative subpixel-antialiased ">
         {
           // LeftPane

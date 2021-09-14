@@ -5,29 +5,44 @@ const StyledButton = styled.button`
   font-family: "Space Grotesk", sans-serif;
 `;
 
-const FilledButton = ({ className, children }) => {
+const FilledButton = ({ className, children, onClick = () => null }) => {
   return (
     <StyledButton
-      className={`bg-prologe-primary border-2 border-prologe-primary text-white w-max px-6 py-4 block ${className} hover:bg-transparent hover:text-prologe-primary hover:font-bold`}
+      onClick={onClick}
+      className={`bg-prologe-primary border-2 border-prologe-primary text-white w-max px-6 py-4 block ${className} `}
     >
       {children}
     </StyledButton>
   );
 };
-const OutlineButton = ({ className, children }) => {
+const OutlineButton = ({ className, children, onClick = () => null }) => {
   return (
     <StyledButton
-      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4  ${className} cursor-pointer hover:bg-prologe-primary hover:text-white`}
+      onClick={onClick}
+      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4  ${className} `}
     >
       {children}
     </StyledButton>
   );
 };
 
-const Button = ({ children = "", className, type }) => {
+const Button = ({
+  children = "",
+  className = "",
+  type = "",
+  onClick = () => null,
+}) => {
   if (type === "outline")
-    return <OutlineButton className={className}>{children}</OutlineButton>;
-  return <FilledButton className={className}>{children}</FilledButton>;
+    return (
+      <OutlineButton onClick={onClick} className={className}>
+        {children}
+      </OutlineButton>
+    );
+  return (
+    <FilledButton onClick={onClick} className={className}>
+      {children}
+    </FilledButton>
+  );
 };
 
 export default Button;

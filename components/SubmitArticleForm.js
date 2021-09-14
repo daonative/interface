@@ -1,6 +1,7 @@
 import { Header } from "./Header";
 import { Card } from "./Card";
 import { useState } from "react";
+import { Input } from "./Input";
 
 export const SubmitArticleForm = ({ id, title, className }) => {
   const [status, setStatus] = useState();
@@ -44,23 +45,15 @@ export const SubmitArticleForm = ({ id, title, className }) => {
           <input type="hidden" name="callId" value={id} />
 
           <input type="hidden" name="callTitle" value={title} />
-          <label
-            htmlFor="articleURL"
-            className="block text-sm font-medium text-gray-600 "
-          >
-            Article Link
-          </label>
-          <div className="mt-1 flex rounded-md shadow-sm mb-3">
-            <input
-              type="url"
-              pattern="https://.*"
-              name="articleURL"
-              className="flex-1 min-w-0 block w-full px-3 py-2 focus:ring-prologe-primary focus:border-prologe-primary sm:text-sm border-prologe-light"
-              placeholder="Enter the link to your article"
-            />
-          </div>
+          <Input
+            label="Article Link"
+            type="url"
+            name="articleURL"
+            placeholder="Enter the link to your article"
+            required={true}
+            pattern="https://.*"
+          />
           <p className="mt-2 text-sm ">{status}</p>
-
           <button
             className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
             type="submit"

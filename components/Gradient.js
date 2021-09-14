@@ -75,5 +75,5 @@ export const Gradient = styled.div`
   @media (min-width: 1800px) {
     background-size: contain;
     background-image: url(/desktop-gradient.svg);
-  }
+  } ;
 `;

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { FilmNoise, Gradient } from "../components/Gradient";
 
 import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import { AnimatedLogo } from "../components/AnimatedLogo";
+import { NoiseBackground } from "../components/NoiseBackground";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -46,14 +46,6 @@ export const Headline = ({ className }) => {
   );
 };
 
-const Background = () => {
-  return (
-    <FilmNoise className="fixed top-0 ">
-      <Gradient />
-    </FilmNoise>
-  );
-};
-
 const LandingNav = ({ className }) => (
   <nav className={className}>
     <div className={`flex justify-between items-center `}>
@@ -70,7 +62,7 @@ export default function Companies() {
         description="Get the word out about your product using content bounties"
       />
       <div className="relative subpixel-antialiased ">
-        <Background />
+        <NoiseBackground />
         {
           // LeftPane
         }

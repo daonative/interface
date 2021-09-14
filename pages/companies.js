@@ -1,12 +1,11 @@
-import Head from "next/head";
 import Link from "next/link";
-import { Gradient } from "../components/Gradient";
-import { AnimatedLogo } from "../components/AnimatedLogo";
+import { FilmNoise, Gradient } from "../components/Gradient";
 
 import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
+import { Nav } from "../components/Nav";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -30,13 +29,13 @@ export const Headline = () => {
           The place for your content bounties. We're building a community that
           gives you access to the best writers in crypto.
         </H2>
-        <div className="flex">
+        <div className="flex flex-wrap">
           <a target="_blank" href="https://discord.gg/zGk5TSSyjX">
             <Button className="mt-6">Get in touch through discord</Button>
           </a>
           <Link href="/">
             <a>
-              <Button type="outline" className="mt-6 ml-3">
+              <Button type="outline" className="mt-6 md:ml-3">
                 Check existing content bounties
               </Button>
             </a>
@@ -47,13 +46,13 @@ export const Headline = () => {
   );
 };
 
-const LandingNav = () => (
-  <nav>
-    <div className="flex justify-between items-center">
-      <AnimatedLogo />
-    </div>
-  </nav>
-);
+const Background = () => {
+  return (
+    <FilmNoise className="fixed top-0 ">
+      <Gradient />
+    </FilmNoise>
+  );
+};
 
 export default function Companies() {
   return (
@@ -63,23 +62,18 @@ export default function Companies() {
         description="Get the word out about your product using content bounties"
       />
       <div className="relative subpixel-antialiased ">
+        <Background />
         {
           // LeftPane
         }
-        <section className="h-full w-full z-20 ">
-          <div className="absolute w-full h-full ">
-            <Gradient />
+        <div className="relative h-full grid gap-y-4 md:grid-rows-6 md:grid-cols-16 py-6 md:py-14 ">
+          <Nav className="row-start-1 md:col-start-8" />
+          <div
+            className={`md:col-start-3 md:col-end-15 row-start-4 md:row-start-3 h-full pt-3 py-6 md:py-14 px-8 md:px-0 magic-grid`}
+          >
+            <Headline />
           </div>
-
-          <div className="relative h-full grid md:grid-cols-12">
-            <div
-              className={`md:col-start-3 md:col-end-11 h-full pt-3 py-6 md:py-14 px-8 md:px-0 magic-grid`}
-            >
-              <LandingNav />
-              <Headline />
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

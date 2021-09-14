@@ -37,4 +37,13 @@ export const proposalList = {
     contentURI:
       "https://docs.google.com/document/d/1J1mw8bb5L6osIeyA4uC0CY5nWN6s6Pu6L1K9B0zU7xo",
   },
+  2: {
+    answerToCallId: "bf6f3e99122d817fd0a5bfedc40217008d4352c5",
+    createdAt: 1631601360000,
+    image: "/prologepinktile.png",
+    claimable: "0.0",
+    publisherAddress: "0xd5cf4f8BA432e07b5AB0250CE46d9134f3629C16",
+    contentURI:
+      "https://arjunnchand13.medium.com/crypto-and-the-unbanked-3e8f32be5989",
+  },
 };

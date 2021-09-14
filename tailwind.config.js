@@ -36,7 +36,7 @@ module.exports = {
         "3/4": "75%",
       },
       colors: {
-        "prologe-primary": "#1D33F5",
+        "prologe-primary": "#3200F5",
         "prologe-light": "#E9EBFF",
         "prologe-white": "#FAFAFA",
       },

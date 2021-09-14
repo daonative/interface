@@ -14,7 +14,7 @@ import { CallMeta } from "../../components/CallMeta";
 
 const Background = () => {
   return (
-    <div className="fixed top-0 h-screen w-screen">
+    <div className="fixed top-0 h-screen w-screen bg-prologe-white">
       <Gradient />
       <div
         className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed right-1/4 top-0`}
@@ -52,7 +52,7 @@ const Calls = ({ call }) => {
         }}
       />
 
-      <div className="relative subpixel-antialiased bg-prologe-white">
+      <div className="relative subpixel-antialiased ">
         <Background />
         <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
           <div

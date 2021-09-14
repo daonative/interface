@@ -2,7 +2,7 @@
 <rect opacity="0.64" width="960" height="1080" fill="url(#paint0_radial)"/>
 <defs>
 <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(4.21405e-05 1080) scale(707 443.337)">
-<stop stop-color="#1D33F5"/>
+<stop stop-color="#3200F5"/>
 <stop offset="1" stop-color="#F5481D" stop-opacity="0"/>
 </radialGradient>
 </defs>

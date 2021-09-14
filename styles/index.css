@@ -76,7 +76,7 @@ small {
   left: -5%;
   position: absolute;
   width: 0%;
-  background-color: #1d33f5;
+  background-color: #3200F5;
   animation: stretchwidth 1s;
   animation-fill-mode: forwards;
   animation-delay: 1300ms;
@@ -94,7 +94,7 @@ small {
   display: flex;
   position: absolute;
   width: 0%;
-  background-color: #1d33f5;
+  background-color: #3200F5;
   z-index: -1;
   animation: stretchwidth 1s;
   animation-fill-mode: forwards;

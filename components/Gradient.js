@@ -6,50 +6,54 @@ export const FilmNoise = styled.div`
   width: 100vw;
   //  opacity: 0.4;
   &::after {
-    animation: grain 01s steps(10) infinite;
+    animation: bg-animation 0.6s infinite;
 
     background-image: url("/noice.png");
+    background-repeat: repeat;
 
     content: "";
-    height: 300%;
-    left: -200%;
     opacity: 0.4;
     position: absolute;
-    top: -120%;
-    width: 1000%;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
   }
-
-  @keyframes grain {
-    0%,
-    100% {
+  @keyframes bg-animation {
+    0% {
       transform: translate(0, 0);
     }
     10% {
-      transform: translate(-5%, -10%);
+      transform: translate(-5%, -5%);
     }
     20% {
-      transform: translate(-15%, 5%);
+      transform: translate(-10%, 5%);
     }
     30% {
-      transform: translate(7%, -25%);
+      transform: translate(5%, -10%);
     }
     40% {
-      transform: translate(-5%, 25%);
+      transform: translate(-5%, 15%);
     }
     50% {
-      transform: translate(-15%, 10%);
+      transform: translate(-10%, 5%);
     }
     60% {
-      transform: translate(15%, 0%);
+      transform: translate(15%, 0);
     }
     70% {
-      transform: translate(0%, 15%);
+      transform: translate(0, 10%);
     }
     80% {
-      transform: translate(3%, 35%);
+      transform: translate(-15%, 0);
     }
     90% {
-      transform: translate(-10%, 10%);
+      transform: translate(10%, 5%);
+    }
+    100% {
+      transform: translate(5%, 0);
     }
   }
 `;

@@ -79,7 +79,7 @@ export default function Home() {
 
           <div className="relative h-full grid md:grid-cols-12">
             <div
-              className={`md:col-start-2 md:col-end-12 h-full pt-3 py-6 md:py-14 px-8 md:px-0 magic-grid`}
+              className={`md:col-start-2 md:col-end-12 h-full pt-3 py-6 md:py-14 px-4 md:px-0 magic-grid`}
             >
               <LandingNav />
               <Headline />

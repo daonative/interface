@@ -7,7 +7,7 @@ import { callForArticles } from "./data/callList";
 export const CallList = () => {
   return (
     <div className="grid grid-cols-12 mt-6 md:mt-0 w-full pt-16 ">
-      <div className="col-start-2 col-end-12 md:col-start-2 md:col-end-11 2xl:col-start-3 mb-4">
+      <div className="col-start-1 col-end-13 px-2 md:px-0 md:col-start-2 md:col-end-12 2xl:col-start-3 mb-4">
         <div className="mb-3 flex justify-between items-center">
           <Header>Latest calls for articles</Header>
         </div>

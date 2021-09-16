@@ -35,7 +35,7 @@ export const Headline = ({ className }) => {
           </a>
           <Link href="/">
             <a>
-              <Button type="outline" className="mt-6 md:ml-3">
+              <Button variant="outline" className="mt-6 md:ml-3">
                 Check existing content bounties
               </Button>
             </a>

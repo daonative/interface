@@ -29,10 +29,6 @@ function getErrorMessage(error: Error) {
   }
 }
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 enum ConnectorNames {
   Injected = "Injected",
   Network = "Network",
@@ -109,7 +105,7 @@ const Connect = () => {
       </div>
       <ul
         role="list"
-        className="p-4 mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        className="p-4 mt-3 grid grid-cols-1 "
       >
         {Object.keys(connectorsByName).map((name) => {
           const currentConnector = connectorsByName[name];
@@ -149,34 +145,14 @@ const Connect = () => {
         </h4>
       )}
       <div className={"flex"}>
-        {!!(library && account) && (
-          <Button
-            onClick={() => {
-              library
-                .getSigner(account)
-                .signMessage("👋")
-                .then((signature: any) => {
-                  window.alert(`Success!\n\n${signature}`);
-                })
-                .catch((error: any) => {
-                  window.alert(
-                    "Failure!" +
-                      (error && error.message ? `\n\n${error.message}` : "")
-                  );
-                });
-            }}
-          >
-            Sign Message
-          </Button>
-        )}
         {(active || error) && (
           <Button
-            type="outline"
+            variant="outline"
             onClick={() => {
               deactivate();
             }}
           >
-            Deactivate
+            Disconnect
           </Button>
         )}
       </div>

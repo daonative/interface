@@ -1,4 +1,3 @@
-import { useRouter } from "next/dist/client/router";
 import { Card } from "../../components/Card";
 import { Gradient } from "../../components/Gradient";
 import { CallSummary } from "../../components/CallSummary";

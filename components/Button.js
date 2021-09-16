@@ -5,41 +5,36 @@ const StyledButton = styled.button`
   font-family: "Space Grotesk", sans-serif;
 `;
 
-const FilledButton = ({ className, children, onClick = () => null }) => {
+const FilledButton = ({ className, children, ...rest }) => {
   return (
     <StyledButton
-      onClick={onClick}
       className={`bg-prologe-primary border-2 border-prologe-primary text-white w-max px-6 py-4 block ${className} `}
+      {...rest}
     >
       {children}
     </StyledButton>
   );
 };
-const OutlineButton = ({ className, children, onClick = () => null }) => {
+const OutlineButton = ({ className, children, ...rest }) => {
   return (
     <StyledButton
-      onClick={onClick}
       className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4  ${className} `}
+      {...rest}
     >
       {children}
     </StyledButton>
   );
 };
 
-const Button = ({
-  children = "",
-  className = "",
-  type = "",
-  onClick = () => null,
-}) => {
-  if (type === "outline")
+const Button = ({ children = "", className = "", variant = "", ...rest }) => {
+  if (variant === "outline")
     return (
-      <OutlineButton onClick={onClick} className={className}>
+      <OutlineButton className={className} {...rest}>
         {children}
       </OutlineButton>
     );
   return (
-    <FilledButton onClick={onClick} className={className}>
+    <FilledButton className={className} {...rest}>
       {children}
     </FilledButton>
   );

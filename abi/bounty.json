@@ -8,7 +8,7 @@
       },
       {
         "internalType": "string",
-        "name": "_details",
+        "name": "_URI",
         "type": "string"
       }
     ],
@@ -214,6 +214,19 @@
         "internalType": "string[]",
         "name": "",
         "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getURI",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
       }
     ],
     "stateMutability": "view",

@@ -41,7 +41,7 @@ export const Headline = () => {
           </a>
           <Link href="/faq">
             <a>
-              <Button type="outline" className="mt-6 ml-3">
+              <Button variant="outline" className="mt-6 ml-3">
                 FAQ
               </Button>
             </a>

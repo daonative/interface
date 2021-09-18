@@ -18,7 +18,6 @@ const { BOUNTY_CREATOR_ADDRESS } = process.env;
 export const BountyList = () => {
   const [bounties, setBounties] = useState([]);
   const { library } = useWeb3React();
-  console.log(library);
 
   const getBounties = async () => {
     const alchemyApiKey = process.env.INFURA_API_KEY;
@@ -84,7 +83,6 @@ export const BountyCreator = () => {
       bountyCreatorAbi,
       library.getSigner(account)
     );
-    console.log(title);
 
     const result = await axios.post("/api/ipfs", {
       title,
@@ -118,7 +116,6 @@ export const BountyCreator = () => {
     setError(undefined);
     setTxModalOpen(false);
   };
-  console.log(bountyLoading);
   return (
     <>
       <TransactionModal

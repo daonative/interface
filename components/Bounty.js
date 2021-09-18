@@ -83,11 +83,11 @@ const WithdrawForm = ({ bountyAddress }) => {
   const [error, setError] = useState(false);
   const [myDeposit, setMyDeposit] = useState("0");
   const getDeposit = async (id) => {
-    const bounty = new ethers.Contract(
-      id,
-      bountyAbi,
-      library.getSigner(account)
-    );
+    const alchemyApiKey = process.env.INFURA_API_KEY;
+    const url = `https://ropsten.infura.io/v3/${alchemyApiKey}`;
+    const provider = new ethers.providers.JsonRpcProvider(url);
+
+    const bounty = new ethers.Contract(id, bountyAbi, provider);
     const myDeposit = await bounty.getDeposit();
     setMyDeposit(myDeposit);
   };
@@ -134,20 +134,20 @@ const WithdrawForm = ({ bountyAddress }) => {
         message={isSubmitting && `Confirm this transaction in your wallet`}
         onClose={handleClose}
       />
-      Claimable {formatEther(myDeposit)}
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-between h-full"
       >
-        <Input
-          label="Add funds"
-          type="text"
-          placeholder="0.5"
-          {...register("amount", { required: true })}
-        />
-        <Button type="submit" variant="outline">
-          Withdraw
-        </Button>
+        <div className="p-4">
+          <div className="mb-3">Claimable {formatEther(myDeposit)}</div>
+          <Input
+            label="Add funds"
+            type="text"
+            placeholder="0.5"
+            {...register("amount", { required: true })}
+          />
+        </div>
+        <Button type="submit">Claim</Button>
       </form>
     </>
   );
@@ -240,9 +240,9 @@ export const Bounty = ({ bountyAddress, loading = false }) => {
 
   if (!bountyAddress) return null;
   return (
-    <>
+    <div className="flex flex-col gap-3">
       <Card>
-        <Header className="min-w-max max-w-full w-1/4 py-3">Funding</Header>
+        <Header className="min-w-max max-w-full w-1/4 py-3">Fund</Header>
         <DepositForm bountyAddress={bountyAddress} />
       </Card>
       <Card>
@@ -257,6 +257,6 @@ export const Bounty = ({ bountyAddress, loading = false }) => {
           <AnswerForm bountyAddress={bountyAddress} />
         </div>
       </Card>
-    </>
+    </div>
   );
 };

@@ -24,6 +24,7 @@ import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../components/TransactionModal";
 import { Input } from "../../components/Input";
 import Button from "../../components/Button";
+import { Loader } from "../../components/Loader";
 
 const Background = () => {
   return (
@@ -45,7 +46,6 @@ const VotingForm = ({ bountyAddress, answerId }) => {
     formState: { errors, isSubmitting, isSubmitSuccessful },
   } = useForm();
 
-  console.log(answerId);
   const { library, account } = useWeb3React();
   const [txModalOpen, setTxModalOpen] = useState(false);
   const [error, setError] = useState(false);
@@ -55,10 +55,8 @@ const VotingForm = ({ bountyAddress, answerId }) => {
       bountyAbi,
       library.getSigner(account)
     );
-    console.log(amount);
     const myDeposit = await bounty.getDeposit();
     const votingAmount = myDeposit.mul(amount).div(100);
-    console.log(votingAmount);
 
     return await bounty.vote(answerId, votingAmount);
   };
@@ -157,10 +155,39 @@ const Answer = ({ answer, id, bountyAddress }) => {
   );
 };
 
-const AnswerList = ({ answers, className, bountyAddress }) => {
+const AnswerList = ({ className, bountyAddress }) => {
+  const [answers, setAnswers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getAnswers = async (id) => {
+    const alchemyApiKey = process.env.INFURA_API_KEY;
+    const url = `https://ropsten.infura.io/v3/${alchemyApiKey}`;
+    const provider = new ethers.providers.JsonRpcProvider(url);
+    const bounty = new ethers.Contract(id, bountyAbi, provider);
+    const answers = await bounty.getAnswers();
+    setAnswers(answers);
+    setLoading(false);
+  };
+
+  useInterval(() => {
+    if (!bountyAddress) return;
+    getAnswers(bountyAddress);
+  }, 3000);
   const hasAnswers = answers?.length > 0;
+  if (loading) {
+    return (
+      <Card className={`px-4 md:px-8 pt-5 py-5 ${className} `}>
+        <Header className="absolute top-0 left-0 min-w-max w-1/4 py-3">
+          Answers
+        </Header>
+        <div className="flex items-center justify-center">
+          <Loader className="h-30 w-30" />
+        </div>
+      </Card>
+    );
+  }
   return (
-    <Card className={`px-4 md:px-8 pt-5 py-5 ${className}`}>
+    <Card className={`px-4 md:px-8 pt-5 py-5 ${className} `}>
       <Header className="absolute top-0 left-0 min-w-max w-1/4 py-3">
         Answers
       </Header>
@@ -186,32 +213,27 @@ const AnswerList = ({ answers, className, bountyAddress }) => {
   );
 };
 
-const Calls = ({ call }) => {
-  console.log(call);
+const ValueLocked = ({ bountyAddress }) => {
   const [balance, setBalance] = useState(undefined);
-  const [answers, setAnswers] = useState([]);
+  const [loading, setLoading] = useState(true);
   const getBalance = async (id) => {
     const alchemyApiKey = process.env.INFURA_API_KEY;
     const url = `https://ropsten.infura.io/v3/${alchemyApiKey}`;
     const provider = new ethers.providers.JsonRpcProvider(url);
     const balance = await provider.getBalance(id);
     setBalance(formatEther(balance.toString()));
+    setLoading(false);
   };
-  const getAnswers = async (id) => {
-    const alchemyApiKey = process.env.INFURA_API_KEY;
-    const url = `https://ropsten.infura.io/v3/${alchemyApiKey}`;
-    const provider = new ethers.providers.JsonRpcProvider(url);
-    const bounty = new ethers.Contract(id, bountyAbi, provider);
-    const answers = await bounty.getAnswers();
-    setAnswers(answers);
-  };
-
   useInterval(() => {
-    if (!call?.id) return;
-    getBalance(call?.id);
-    getAnswers(call?.id);
+    if (!bountyAddress) return;
+    getBalance(bountyAddress);
   }, 3000);
+  if (loading) return <Loader className="h-4 w-4" />;
 
+  return balance;
+};
+
+const Calls = ({ call }) => {
   const cid = call?.id;
   const description = call?.title;
   return (
@@ -241,10 +263,9 @@ const Calls = ({ call }) => {
         <Background />
         <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
           <div
-            className={`md:col-start-1 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+            className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
           >
             <Nav />
-            <Connect />
           </div>
           <div
             className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
@@ -252,20 +273,17 @@ const Calls = ({ call }) => {
             <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
               <CallSummary
                 title={call?.title}
-                valueLocked={balance}
+                valueLocked={<ValueLocked bountyAddress={call.id} />}
                 deadline={call?.deadline}
                 cta={call?.cta}
               />
             </Card>
 
             <CallDescription className="mb-3" description={call?.description} />
-            <AnswerList
-              className="mb-3"
-              answers={answers}
-              bountyAddress={call?.id}
-            />
+            <AnswerList className="mb-3" bountyAddress={call?.id} />
           </div>
           <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
+            <Connect />
             <Bounty bountyAddress={cid} />
             <CallMeta
               className="mb-3"

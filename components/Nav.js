@@ -5,7 +5,7 @@ import A from "./A";
 export const Nav = ({className}) => {
   return (
     <div className={`flex ${className}`}>
-      <div className="relative flex flex-col justify-center items-center md:pl-4">
+      <div className="relative flex flex-col justify-center items-center ">
         <Logo />
         <A
           className="bluebar md:hidden"

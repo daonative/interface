@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { injected, network, walletconnect } from "../web3/connectors";
 import { useEagerConnect, useInactiveListener } from "../web3/hooks";
 import { Card } from "./Card";
+import { Modal, ModalBody, ModalTitle } from "./Modal";
 import { Header } from "./Header";
 import Button from "./Button";
 
@@ -44,10 +45,8 @@ function ChainId() {
   const { chainId } = useWeb3React();
   return (
     <div className={"flex"}>
-      <span role="img" aria-label="chain">
-        chain id:
-      </span>
-      <span className="ml-3">{chainId ?? ""}</span>
+      <span>network:</span>
+      <span className="ml-3">{chainId === 3 && "ropsten"}</span>
     </div>
   );
 }
@@ -72,16 +71,9 @@ function Account() {
 
 const Connect = () => {
   const context = useWeb3React<Web3Provider>();
-  const {
-    connector,
-    library,
-    chainId,
-    account,
-    activate,
-    deactivate,
-    active,
-    error,
-  } = context;
+  const { connector, chainId, account, activate, deactivate, active, error } =
+    context;
+  const [showModal, setShowModal] = useState(false);
 
   // handle logic to recognize the connector currently being activated
   const [activatingConnector, setActivatingConnector] = useState<any>();
@@ -97,87 +89,93 @@ const Connect = () => {
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
   useInactiveListener(!triedEager || !!activatingConnector);
   return (
-    <Card className="justify-between">
-      <Header className="min-w-max max-w-full w-1/4 py-3">Connect</Header>
-      <div className="p-4">
-        <ChainId />
-        <Account />
-      </div>
-      <ul
-        role="list"
-        className="p-4 mt-3 grid grid-cols-1 "
-      >
-        {Object.keys(connectorsByName).map((name) => {
-          const currentConnector = connectorsByName[name];
-          const activating = currentConnector === activatingConnector;
-          const connected = currentConnector === connector;
-          const disabled =
-            !triedEager || !!activatingConnector || connected || !!error;
+    <>
+      <button onClick={() => setShowModal(!showModal)}>
+        {account ? <Account /> : "Connect"}
+      </button>
+      <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+        <ModalTitle>Connect</ModalTitle>
+        <div>
+          <ChainId />
+          <Account />
 
-          return (
-            <li key={name}>
+          <ul role="list" className="my-3  w-full flex gap-3">
+            {Object.keys(connectorsByName).map((name) => {
+              const currentConnector = connectorsByName[name];
+              const activating = currentConnector === activatingConnector;
+              const connected = currentConnector === connector;
+              const disabled =
+                !triedEager || !!activatingConnector || connected || !!error;
+
+              return (
+                <li key={name}>
+                  <button
+                    className={`flex items-center justify-between border bg-white rounded-md truncate ${
+                      connected
+                        ? "border-prologe-primary"
+                        : "border-prologe-light"
+                    }`}
+                    disabled={disabled}
+                    onClick={() => {
+                      setActivatingConnector(currentConnector);
+                      activate(connectorsByName[name]);
+                    }}
+                  >
+                    <div className="flex-1 px-4 py-2 text-sm truncate">
+                      {name === "Injected" ? "Browser Wallet" : name}
+                    </div>
+                    {activating && (
+                      <div className=" flex justify-center items-center">
+                        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-prologe-primary mr-3"></div>
+                      </div>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+          {!!error && (
+            <h4 style={{ marginTop: "1rem", marginBottom: "0" }}>
+              {getErrorMessage(error)}
+            </h4>
+          )}
+          <div className={"flex"}>
+            {(active || error) && (
               <button
-                className={`flex items-center justify-between border bg-white rounded-md truncate ${
-                  connected ? "border-prologe-primary" : "border-prologe-light"
-                }`}
-                disabled={disabled}
+                className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
+                style={{ fontFamily: "Space Grotesk" }}
                 onClick={() => {
-                  setActivatingConnector(currentConnector);
-                  activate(connectorsByName[name]);
+                  deactivate();
                 }}
               >
-                <div className="flex-1 px-4 py-2 text-sm truncate">
-                  {name === "Injected" ? "Browser Wallet" : name}
-                </div>
-                {activating && (
-                  <div className=" flex justify-center items-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-prologe-primary mr-3"></div>
-                  </div>
-                )}
+                Disconnect
               </button>
-            </li>
-          );
-        })}
-      </ul>
-      {!!error && (
-        <h4 style={{ marginTop: "1rem", marginBottom: "0" }}>
-          {getErrorMessage(error)}
-        </h4>
-      )}
-      <div className={"flex"}>
-        {(active || error) && (
-          <Button
-            variant="outline"
-            onClick={() => {
-              deactivate();
-            }}
-          >
-            Disconnect
-          </Button>
-        )}
-      </div>
+            )}
+          </div>
 
-      {!!(
-        connector === connectorsByName[ConnectorNames.Network] && chainId
-      ) && (
-        <Button
-          onClick={() => {
-            (connector as any).changeChainId(chainId === 1 ? 4 : 1);
-          }}
-        >
-          Switch Networks
-        </Button>
-      )}
-      {connector === connectorsByName[ConnectorNames.WalletConnect] && (
-        <Button
-          onClick={() => {
-            (connector as any).close();
-          }}
-        >
-          Kill WalletConnect Session
-        </Button>
-      )}
-    </Card>
+          {!!(
+            connector === connectorsByName[ConnectorNames.Network] && chainId
+          ) && (
+            <Button
+              onClick={() => {
+                (connector as any).changeChainId(chainId === 1 ? 4 : 1);
+              }}
+            >
+              Switch Networks
+            </Button>
+          )}
+          {connector === connectorsByName[ConnectorNames.WalletConnect] && (
+            <Button
+              onClick={() => {
+                (connector as any).close();
+              }}
+            >
+              Kill WalletConnect Session
+            </Button>
+          )}
+        </div>
+      </Modal>
+    </>
   );
 };
 

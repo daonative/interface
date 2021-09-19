@@ -59,7 +59,7 @@ function Account() {
           ? "-"
           : account
           ? `${account.substring(0, 6)}...${account.substring(
-              account.length - 4
+              account.length - 6
             )}`
           : ""}
       </span>
@@ -153,17 +153,6 @@ const Connect = () => {
             )}
           </div>
 
-          {!!(
-            connector === connectorsByName[ConnectorNames.Network] && chainId
-          ) && (
-            <Button
-              onClick={() => {
-                (connector as any).changeChainId(chainId === 1 ? 4 : 1);
-              }}
-            >
-              Switch Networks
-            </Button>
-          )}
           {connector === connectorsByName[ConnectorNames.WalletConnect] && (
             <Button
               onClick={() => {

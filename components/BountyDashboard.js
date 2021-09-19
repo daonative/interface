@@ -142,7 +142,9 @@ export const BountyCreator = () => {
           </div>
         ) : (
           <>
-            <Header className="min-w-max max-w-full w-1/4 py-3">Creator</Header>
+            <Header className="min-w-max max-w-full w-1/4 py-3">
+              Content Bounty Form
+            </Header>
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="h-full flex flex-col justify-between"

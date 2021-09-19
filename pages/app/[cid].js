@@ -1,9 +1,6 @@
 import { Card } from "../../components/Card";
-import { Gradient } from "../../components/Gradient";
 import { CallSummary } from "../../components/CallSummary";
-import { SubmitArticleForm } from "../../components/SubmitArticleForm";
 import { CallDescription } from "../../components/CallDescription";
-import { Nav } from "../../components/Nav";
 import { Bounty } from "../../components/Bounty";
 import { SponsorList } from "../../components/SponsorList";
 import Connect from "../../components/Connect";
@@ -15,7 +12,6 @@ import axios from "axios";
 import { useState } from "react";
 import { useInterval } from "../../components/hooks";
 import { formatEther, parseEther } from "@ethersproject/units";
-import { BigNumber } from "@ethersproject/bignumber";
 import { Header } from "../../components/Header";
 import Image from "next/image";
 import moment from "moment";
@@ -23,18 +19,28 @@ import { useForm } from "react-hook-form";
 import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../components/TransactionModal";
 import { Input } from "../../components/Input";
-import Button from "../../components/Button";
 import { Loader } from "../../components/Loader";
+import { AnimatedLogo } from "../../components/AnimatedLogo";
+import { NoiseBackground } from "../../components/NoiseBackground";
+
+const LandingNav = () => (
+  <nav>
+    <div className="flex justify-between items-center">
+      <AnimatedLogo />
+    </div>
+  </nav>
+);
 
 const Background = () => {
   return (
     <div className="fixed top-0 h-screen w-screen bg-prologe-white">
-      <Gradient />
+      <NoiseBackground />
+
       <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed right-1/4 top-0`}
+        className={`hidden lg:block h-screen border-r-prologe border-prologe-light border-opacity-50 fixed right-1/4 top-0`}
       ></div>
       <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed left-1/4 top-0`}
+        className={`hidden lg:block h-screen border-r-prologe border-prologe-light border-opacity-50 fixed left-1/4 top-0`}
       ></div>
     </div>
   );
@@ -43,7 +49,7 @@ const VotingForm = ({ bountyAddress, answerId }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { isSubmitting, isSubmitSuccessful },
   } = useForm();
 
   const { library, account } = useWeb3React();
@@ -84,11 +90,8 @@ const VotingForm = ({ bountyAddress, answerId }) => {
         message={isSubmitting && `Confirm this transaction in your wallet`}
         onClose={handleClose}
       />
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col justify-between h-full"
-      >
-        <div className="p-4">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
           <Input
             label="Vote"
             type="text"
@@ -98,7 +101,12 @@ const VotingForm = ({ bountyAddress, answerId }) => {
             {...register("amount", { required: true })}
           />
         </div>
-        <Button type="submit">Fund</Button>
+        <button
+          style={{ fontSize: "clamp(0.7rem, 0.9vw, 1.4rem)" }}
+          className={`mt-2 bg-prologe-primary text-white w-full px-2 py-1 block`}
+        >
+          Vote
+        </button>
       </form>
     </>
   );
@@ -108,8 +116,8 @@ const Answer = ({ answer, id, bountyAddress }) => {
   if (!answer) return null;
   return (
     <li
-      className="col-span-1 flex flex-col bg-white rounded-lg  border-gray-200"
-      style={{ borderWidth: 0.2 }}
+      className="flex flex-col bg-white rounded-lg  border-gray-200 "
+      style={{ borderWidth: 0.2, maxWidth: 200 }}
     >
       <div className="flex-1 flex flex-col px-2 pt-1 pb-6">
         <div className="flex justify-between mb-2">
@@ -123,6 +131,15 @@ const Answer = ({ answer, id, bountyAddress }) => {
             )}`}
           </h3>
         </div>
+        <Image
+          className="self-center"
+          src={"/prologepinktile.png"}
+          alt="Answer Image"
+          layout="fixed"
+          width="160"
+          height="180"
+        />
+
         <img
           className="w-full flex-shrink-0 mx-auto "
           src={answer?.image}
@@ -140,16 +157,13 @@ const Answer = ({ answer, id, bountyAddress }) => {
         </dl>
         <a
           style={{ fontSize: "clamp(0.7rem, 0.9vw, 1.4rem)" }}
-          className={`mt-2 bg-prologe-primary text-white w-max px-2 py-1 block `}
+          className={`mt-2 bg-prologe-primary text-white w-max px-2 py-1 block mb-3`}
           target="_blank"
           href={answer?.uri}
         >
           View Source
         </a>
-      </div>
-      <VotingForm bountyAddress={bountyAddress} answerId={answer.id} />
-      <div>
-        <div className="-mt-px flex divide-x divide-gray-200"></div>
+        <VotingForm bountyAddress={bountyAddress} answerId={answer.id} />
       </div>
     </li>
   );
@@ -187,7 +201,7 @@ const AnswerList = ({ className, bountyAddress }) => {
     );
   }
   return (
-    <Card className={`px-4 md:px-8 pt-5 py-5 ${className} `}>
+    <Card className={`px-4 pt-5 py-5 ${className} `}>
       <Header className="absolute top-0 left-0 min-w-max w-1/4 py-3">
         Answers
       </Header>
@@ -233,8 +247,8 @@ const ValueLocked = ({ bountyAddress }) => {
   return balance;
 };
 
-const Calls = ({ call }) => {
-  const cid = call?.id;
+const Calls = ({ call, bountyAddress }) => {
+  const cid = bountyAddress;
   const description = call?.title;
   return (
     <>
@@ -261,29 +275,35 @@ const Calls = ({ call }) => {
 
       <div className="relative subpixel-antialiased ">
         <Background />
-        <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
+        <div className="relative h-full grid md:grid-cols-16 md:px-0">
           <div
-            className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+            className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
           >
-            <Nav />
+            <div
+              className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-1/4`}
+            >
+              <div className="p-4 md:pl-8">
+                <LandingNav />
+                <Connect />
+              </div>
+            </div>
           </div>
           <div
-            className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
+            className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}
           >
             <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
               <CallSummary
                 title={call?.title}
-                valueLocked={<ValueLocked bountyAddress={call.id} />}
+                valueLocked={<ValueLocked bountyAddress={cid} />}
                 deadline={call?.deadline}
                 cta={call?.cta}
               />
             </Card>
 
             <CallDescription className="mb-3" description={call?.description} />
-            <AnswerList className="mb-3" bountyAddress={call?.id} />
+            <AnswerList className="mb-3" bountyAddress={cid} />
           </div>
-          <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
-            <Connect />
+          <div className="md:col-start-13 md:col-end-17 py-2 px-0 md:px-8">
             <Bounty bountyAddress={cid} />
             <CallMeta
               className="mb-3"
@@ -291,7 +311,7 @@ const Calls = ({ call }) => {
               wordCount={call?.wordCount}
             />
 
-            {call?.sponsors.length > 0 && (
+            {call?.sponsors?.length > 0 && (
               <SponsorList className="mb-3" sponsors={call?.sponsors} />
             )}
           </div>
@@ -313,12 +333,8 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      call: {
-        id: context.params.cid,
-        title: result.data.title,
-        deadline: result.data.deadline,
-        sponsors: [],
-      },
+      call: result.data,
+      bountyAddress: context.params.cid,
     },
   };
 }

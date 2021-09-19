@@ -9,9 +9,8 @@ import { UnsupportedChainIdError, useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
 import { injected, network, walletconnect } from "../web3/connectors";
 import { useEagerConnect, useInactiveListener } from "../web3/hooks";
-import { Card } from "./Card";
-import { Modal, ModalBody, ModalTitle } from "./Modal";
 import { Header } from "./Header";
+import { Modal, ModalBody, ModalTitle } from "./Modal";
 import Button from "./Button";
 
 function getErrorMessage(error: Error) {
@@ -32,12 +31,11 @@ function getErrorMessage(error: Error) {
 
 enum ConnectorNames {
   Injected = "Injected",
-  Network = "Network",
+  //  Network = "Network",
   WalletConnect = "WalletConnect",
 }
 const connectorsByName: { [connectorName in ConnectorNames]: any } = {
   [ConnectorNames.Injected]: injected,
-  [ConnectorNames.Network]: network,
   [ConnectorNames.WalletConnect]: walletconnect,
 };
 
@@ -90,8 +88,10 @@ const Connect = () => {
   useInactiveListener(!triedEager || !!activatingConnector);
   return (
     <>
-      <button onClick={() => setShowModal(!showModal)}>
-        {account ? <Account /> : "Connect"}
+      <button className="w-full" onClick={() => setShowModal(!showModal)}>
+        <Header className="w-full">
+          {account ? <Account /> : "Connect to a wallet"}
+        </Header>
       </button>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <ModalTitle>Connect</ModalTitle>

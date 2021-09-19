@@ -12,7 +12,7 @@ export const FilmNoise = styled.div`
     background-repeat: repeat;
 
     content: "";
-    opacity: 0.4;
+    opacity: 0.2;
     position: absolute;
     top: -50%;
     left: -50%;

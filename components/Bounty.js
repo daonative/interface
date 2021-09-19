@@ -65,8 +65,14 @@ const DepositForm = ({ bountyAddress }) => {
             placeholder="0.5"
             {...register("depositAmount", { required: true })}
           />
+          <button
+            className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
+            type="submit"
+            style={{ fontFamily: "Space Grotesk" }}
+          >
+            Fund
+          </button>
         </div>
-        <Button type="submit">Fund</Button>
       </form>
     </>
   );

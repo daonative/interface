@@ -55,7 +55,7 @@ const Calls = ({ call }) => {
         <Background />
         <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
           <div
-            className={`md:col-start-1 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+            className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
           >
             <Nav />
           </div>

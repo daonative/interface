@@ -6,6 +6,7 @@ import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import { AnimatedLogo } from "../components/AnimatedLogo";
 import { NoiseBackground } from "../components/NoiseBackground";
+import { LandingNav } from "../components/LandingNav";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -46,13 +47,7 @@ export const Headline = ({ className }) => {
   );
 };
 
-const LandingNav = ({ className }) => (
-  <nav className={className}>
-    <div className={`flex justify-between items-center `}>
-      <AnimatedLogo />
-    </div>
-  </nav>
-);
+
 
 export default function Companies() {
   return (

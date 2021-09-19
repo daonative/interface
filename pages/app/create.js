@@ -1,17 +1,11 @@
 import Connect from "../../components/Connect";
 import { NextSeo } from "next-seo";
 
-import { AnimatedLogo } from "../../components/AnimatedLogo";
 import { NoiseBackground } from "../../components/NoiseBackground";
 import { BountyCreator } from "../../components/BountyDashboard";
+import CreateSteps from "../../components/Steps";
+import { LandingNav } from "../../components/LandingNav";
 
-const LandingNav = () => (
-  <nav>
-    <div className="flex justify-between items-center">
-      <AnimatedLogo />
-    </div>
-  </nav>
-);
 
 const Background = () => {
   return (
@@ -72,6 +66,7 @@ const Create = () => {
           <div
             className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}
           >
+            <CreateSteps />
             <BountyCreator />
           </div>
         </div>

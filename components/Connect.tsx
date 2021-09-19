@@ -17,7 +17,7 @@ function getErrorMessage(error: Error) {
   if (error instanceof NoEthereumProviderError) {
     return "No Ethereum browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.";
   } else if (error instanceof UnsupportedChainIdError) {
-    return "You're connected to an unsupported network.";
+    return "You're connected to an unsupported network. We only support ropsten testnet";
   } else if (
     error instanceof UserRejectedRequestErrorInjected ||
     error instanceof UserRejectedRequestErrorWalletConnect
@@ -96,7 +96,6 @@ const Connect = () => {
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
         <ModalTitle>Connect</ModalTitle>
         <div>
-          <ChainId />
           <Account />
 
           <ul role="list" className="my-3  w-full flex gap-3">

@@ -163,9 +163,11 @@ export const BountyCreator = () => {
                   {...register("deadline", { required: true })}
                 />
               </div>
-              <Button type="submit" value="Submit">
-                Create Bounty
-              </Button>
+              {account && (
+                <Button type="submit" value="Submit">
+                  Create Bounty
+                </Button>
+              )}
             </form>
           </>
         )}

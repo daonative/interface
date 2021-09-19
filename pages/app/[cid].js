@@ -20,31 +20,9 @@ import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../components/TransactionModal";
 import { Input } from "../../components/Input";
 import { Loader } from "../../components/Loader";
-import { AnimatedLogo } from "../../components/AnimatedLogo";
-import { NoiseBackground } from "../../components/NoiseBackground";
+import { Background } from "../../components/Background";
+import { LandingNav } from "../../components/LandingNav";
 
-const LandingNav = () => (
-  <nav>
-    <div className="flex justify-between items-center">
-      <AnimatedLogo />
-    </div>
-  </nav>
-);
-
-const Background = () => {
-  return (
-    <div className="fixed top-0 h-screen w-screen bg-prologe-white">
-      <NoiseBackground />
-
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-light border-opacity-50 fixed right-1/4 top-0`}
-      ></div>
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-light border-opacity-50 fixed left-1/4 top-0`}
-      ></div>
-    </div>
-  );
-};
 const VotingForm = ({ bountyAddress, answerId }) => {
   const {
     register,

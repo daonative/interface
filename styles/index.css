@@ -35,7 +35,6 @@ div#__next > div {
   }
 }
 
-
 h1 {
   line-height: 110%;
   font-size: clamp(2.2rem, 4.9vw, 6rem);
@@ -49,21 +48,20 @@ h3 {
   font-size: clamp(1.4rem, 1.5vw, 3rem);
 }
 
-body, element {
+body,
+element {
   margin: 0;
-  font-family:"Archivo", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-feature-settings: "liga" off;
   font-size: clamp(0.9rem, 1vw, 1.2rem);
 }
 
 p,
- li {
+li {
   font-family: "Archivo", sans-serif;
   font-size: clamp(0.8rem, 1vw, 1.3rem);
   font-weight: 300;
 }
-
-
 
 small {
   font-family: "Archivo", sans-serif;
@@ -76,7 +74,7 @@ small {
   left: -5%;
   position: absolute;
   width: 0%;
-  background-color: #3200F5;
+  background-color: #3200f5;
   animation: stretchwidth 1s;
   animation-fill-mode: forwards;
   animation-delay: 1300ms;
@@ -94,7 +92,7 @@ small {
   display: flex;
   position: absolute;
   width: 0%;
-  background-color: #3200F5;
+  background-color: #3200f5;
   z-index: -1;
   animation: stretchwidth 1s;
   animation-fill-mode: forwards;
@@ -108,4 +106,8 @@ small {
   100% {
     width: 110%;
   }
+}
+#nprogress .bar {
+  background: #3200f5;
+  height: 1px;
 }

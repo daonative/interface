@@ -3,8 +3,8 @@ import { Loader } from "./Loader";
 
 const getTitle = ({ isLoading, confirmed, error }) => {
   if (isLoading) return "Waiting For Confirmation";
-  if (confirmed) return "Tx Confirmed";
   if (error) return "Transaction rejected";
+  if (confirmed) return "Tx Confirmed";
   return "";
 };
 

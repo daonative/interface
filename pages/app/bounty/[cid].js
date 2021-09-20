@@ -293,7 +293,7 @@ const Calls = ({ call, bountyAddress }) => {
             <CallDescription className="mb-3" description={call?.description} />
             <AnswerList className="mb-3" bountyAddress={cid} />
           </div>
-          <div className="md:col-start-13 md:col-end-17 py-2 px-0 md:px-8">
+          <div className="md:col-start-13 md:col-end-17 py-2 px-2 md:px-8">
             <Bounty bountyAddress={cid} />
             <CallMeta
               className="mb-3"

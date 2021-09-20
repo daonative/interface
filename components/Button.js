@@ -8,7 +8,7 @@ const StyledButton = styled.button`
 const FilledButton = ({ className, children, ...rest }) => {
   return (
     <StyledButton
-      className={`bg-prologe-primary border-2 border-prologe-primary text-white w-max px-6 py-4 block ${className} `}
+      className={`bg-prologe-primary border-2 border-prologe-primary text-white w-max px-6 py-2 block ${className} `}
       {...rest}
     >
       {children}
@@ -18,7 +18,7 @@ const FilledButton = ({ className, children, ...rest }) => {
 const OutlineButton = ({ className, children, ...rest }) => {
   return (
     <StyledButton
-      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-4  ${className} `}
+      className={`text-prologe-primary border-2 border-prologe-primary  w-max px-6 py-2  ${className} `}
       {...rest}
     >
       {children}

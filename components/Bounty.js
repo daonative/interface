@@ -54,25 +54,21 @@ const DepositForm = ({ bountyAddress }) => {
         message={isSubmitting && `Confirm this transaction in your wallet`}
         onClose={handleClose}
       />
+
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col justify-between h-full"
+        className="flex flex-col justify-between h-full p-4"
       >
-        <div className="p-4">
-          <Input
-            label="Add funds"
-            type="text"
-            placeholder="0.5"
-            {...register("depositAmount", { required: true })}
-          />
-          <button
-            className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
-            type="submit"
-            style={{ fontFamily: "Space Grotesk" }}
-          >
-            Fund
-          </button>
-        </div>
+        <Input
+          label="Add funds"
+          type="text"
+          placeholder="0.5"
+          {...register("depositAmount", { required: true })}
+        />
+
+        <Button className="self-end" type="submit">
+          Fund
+        </Button>
       </form>
     </>
   );
@@ -142,18 +138,18 @@ const WithdrawForm = ({ bountyAddress }) => {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col justify-between h-full"
+        className="flex flex-col justify-between h-full p-4"
       >
-        <div className="p-4">
-          <div className="mb-3">Claimable {formatEther(myDeposit)}</div>
-          <Input
-            label="Add funds"
-            type="text"
-            placeholder="0.5"
-            {...register("amount", { required: true })}
-          />
-        </div>
-        <Button type="submit">Claim</Button>
+        <div className="mb-3">Claimable {formatEther(myDeposit)}</div>
+        <Input
+          label="Add funds"
+          type="text"
+          placeholder="0.5"
+          {...register("amount", { required: true })}
+        />
+        <Button className="self-end" type="submit">
+          Claim
+        </Button>
       </form>
     </>
   );
@@ -206,7 +202,7 @@ const AnswerForm = ({ bountyAddress }) => {
       />
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col justify-between h-full"
+        className="flex flex-col justify-between h-full p-4"
       >
         <Input
           label="Article Link"
@@ -215,13 +211,10 @@ const AnswerForm = ({ bountyAddress }) => {
           pattern="https://.*"
           {...register("articleURI", { required: true })}
         />
-        <button
-          className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
-          type="submit"
-          style={{ fontFamily: "Space Grotesk" }}
-        >
-          Sumbit Article
-        </button>
+
+        <Button className="self-end" type="submit">
+          Submit Article
+        </Button>
       </form>
     </>
   );
@@ -259,9 +252,7 @@ export const Bounty = ({ bountyAddress, loading = false }) => {
         <Header className="min-w-max max-w-full w-1/4 py-3">
           Submit your article
         </Header>
-        <div className="p-4">
-          <AnswerForm bountyAddress={bountyAddress} />
-        </div>
+        <AnswerForm bountyAddress={bountyAddress} />
       </Card>
     </div>
   );

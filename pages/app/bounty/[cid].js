@@ -270,7 +270,7 @@ const Calls = ({ call, bountyAddress }) => {
             className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
           >
             <div
-              className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-1/4`}
+              className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-full md:w-1/4`}
             >
               <div className="p-4 md:pl-8">
                 <LandingNav />

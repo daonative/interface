@@ -42,8 +42,8 @@ export const Headline = ({ className }) => {
             <Button className="mt-6">Create a bounty</Button>
           </Link>
           <Link href="/app/bounty/0x7ddCeaFA32393184464cd5fa245339da168633b8">
-            <Button className="mt-6 ml-3" variant="outline">
-              Example Bounty
+            <Button className="mt-6 md:ml-3" variant="outline">
+              View an example
             </Button>
           </Link>
         </div>
@@ -61,7 +61,7 @@ function App() {
       />
       <div className="relative subpixel-antialiased ">
         <NoiseBackground />
-        <div className="relative h-full grid md:grid-cols-16 py-6 md:py-14 ">
+        <div className="relative h-full grid md:grid-cols-16 py-6 md:py-14 px-4 md:px-0 ">
           <div className="md:col-start-4 md:col-end-14">
             <div className="flex items-center justify-between">
               <LandingNav />

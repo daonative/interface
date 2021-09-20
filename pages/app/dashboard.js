@@ -1,7 +1,7 @@
 import Connect from "../../components/Connect";
 import { NextSeo } from "next-seo";
 import { NoiseBackground } from "../../components/NoiseBackground";
-import { BountyCreator, BountyList } from "../../components/BountyDashboard";
+import { BountyList } from "../../components/BountyDashboard";
 
 function App() {
   return (

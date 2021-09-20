@@ -1,27 +1,27 @@
-import { Card } from "../../components/Card";
-import { CallSummary } from "../../components/CallSummary";
-import { CallDescription } from "../../components/CallDescription";
-import { Bounty } from "../../components/Bounty";
-import { SponsorList } from "../../components/SponsorList";
-import Connect from "../../components/Connect";
+import { Card } from "../../../components/Card";
+import { CallSummary } from "../../../components/CallSummary";
+import { CallDescription } from "../../../components/CallDescription";
+import { Bounty } from "../../../components/Bounty";
+import { SponsorList } from "../../../components/SponsorList";
+import Connect from "../../../components/Connect";
 import { NextSeo } from "next-seo";
-import { CallMeta } from "../../components/CallMeta";
-import bountyAbi from "../../abi/bounty.json";
+import { CallMeta } from "../../../components/CallMeta";
+import bountyAbi from "../../../abi/bounty.json";
 import { ethers } from "ethers";
 import axios from "axios";
 import { useState } from "react";
-import { useInterval } from "../../components/hooks";
-import { formatEther, parseEther } from "@ethersproject/units";
-import { Header } from "../../components/Header";
+import { useInterval } from "../../../components/hooks";
+import { formatEther } from "@ethersproject/units";
+import { Header } from "../../../components/Header";
 import Image from "next/image";
 import moment from "moment";
 import { useForm } from "react-hook-form";
 import { useWeb3React } from "@web3-react/core";
-import { TransactionModal } from "../../components/TransactionModal";
-import { Input } from "../../components/Input";
-import { Loader } from "../../components/Loader";
-import { Background } from "../../components/Background";
-import { LandingNav } from "../../components/LandingNav";
+import { TransactionModal } from "../../../components/TransactionModal";
+import { Input } from "../../../components/Input";
+import { Loader } from "../../../components/Loader";
+import { Background } from "../../../components/Background";
+import { LandingNav } from "../../../components/LandingNav";
 
 const VotingForm = ({ bountyAddress, answerId }) => {
   const {
@@ -69,11 +69,23 @@ const VotingForm = ({ bountyAddress, answerId }) => {
         onClose={handleClose}
       />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <Input
-            label="Vote"
+        <label
+          htmlFor="price"
+          className="block text-sm font-medium text-gray-700"
+        >
+          Vote on this article
+        </label>
+        <div className="mt-1 relative rounded-md shadow-sm">
+          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+            <span className="text-gray-500 sm:text-sm">%</span>
+          </div>
+          <input
             type="text"
-            placeholder="10%"
+            id="vote"
+            className="focus:ring-prologe-primary focus:border-prologe-primary block w-full pl-7 pr-12 sm:text-sm border-prologe-light "
+            placeholder="0.00"
+            aria-describedby="vote-percentage"
+            placeholder="10"
             min="1"
             max="100"
             {...register("amount", { required: true })}

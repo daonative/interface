@@ -38,7 +38,7 @@ export const BountyList = () => {
       <Header className="min-w-max max-w-full w-1/4 py-3">List</Header>
       <div className="p-4">
         {bounties.map((bounty) => (
-          <Link key={bounty} href={`/app/${bounty}`}>
+          <Link key={bounty} href={`/app/bounty/${bounty}`}>
             <a className="block text-prologe-primary">{bounty}</a>
           </Link>
         ))}
@@ -74,7 +74,7 @@ export const BountyCreator = () => {
 
   useEffect(() => {
     if (!bountyAddress) return;
-    router.push(`/app/${bountyAddress}`);
+    router.push(`/app/bounty/${bountyAddress}`);
   }, [bountyAddress]);
 
   const createBounty = async ({ title, deadline }) => {

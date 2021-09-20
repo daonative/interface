@@ -85,11 +85,11 @@ const WithdrawForm = ({ bountyAddress }) => {
   const [error, setError] = useState(false);
   const [myDeposit, setMyDeposit] = useState("0");
   const getDeposit = async (id) => {
-    const alchemyApiKey = process.env.INFURA_API_KEY;
-    const url = `https://ropsten.infura.io/v3/${alchemyApiKey}`;
-    const provider = new ethers.providers.JsonRpcProvider(url);
-
-    const bounty = new ethers.Contract(id, bountyAbi, provider);
+    const bounty = new ethers.Contract(
+      id,
+      bountyAbi,
+      library.getSigner(account)
+    );
     const myDeposit = await bounty.getDeposit();
     setMyDeposit(myDeposit);
   };

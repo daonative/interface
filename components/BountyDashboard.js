@@ -147,24 +147,22 @@ export const BountyCreator = () => {
             </Header>
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="h-full flex flex-col justify-between"
+              className="h-full flex flex-col justify-between p-4"
             >
-              <div className="p-4">
-                <Input
-                  type="text"
-                  label="Title"
-                  {...register("title", { required: true })}
-                />
-                <Input
-                  type="date"
-                  label="Deadline"
-                  defaultValue={formatDate(DateTime.local().plus({ days: 1 }))}
-                  min={formatDate(DateTime.local().plus({ days: 1 }))}
-                  {...register("deadline", { required: true })}
-                />
-              </div>
+              <Input
+                type="text"
+                label="Title"
+                {...register("title", { required: true })}
+              />
+              <Input
+                type="date"
+                label="Deadline"
+                defaultValue={formatDate(DateTime.local().plus({ days: 1 }))}
+                min={formatDate(DateTime.local().plus({ days: 1 }))}
+                {...register("deadline", { required: true })}
+              />
               {account && (
-                <Button type="submit" value="Submit">
+                <Button className="self-end" type="submit" value="Submit">
                   Create Bounty
                 </Button>
               )}

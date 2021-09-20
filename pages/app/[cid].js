@@ -220,7 +220,7 @@ const ValueLocked = ({ bountyAddress }) => {
     if (!bountyAddress) return;
     getBalance(bountyAddress);
   }, 3000);
-  if (loading) return <Loader className="h-4 w-4" />;
+  if (loading) return <Loader className="h-3 w-3" />;
 
   return balance;
 };

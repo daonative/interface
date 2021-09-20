@@ -11,6 +11,7 @@ import { Loader } from "./Loader";
 import { formatEther, parseEther } from "@ethersproject/units";
 import { TransactionModal } from "./TransactionModal";
 import { useInterval } from "./hooks";
+import Image from "next/image";
 
 const DepositForm = ({ bountyAddress }) => {
   const {
@@ -73,6 +74,13 @@ const DepositForm = ({ bountyAddress }) => {
     </>
   );
 };
+
+const ETH = ({ amount }) => (
+  <div className="flex">
+    <Image width="12" height="12" src="/ethereum-icon.svg" />
+    <div>{amount}</div>
+  </div>
+);
 
 const WithdrawForm = ({ bountyAddress }) => {
   const {
@@ -140,9 +148,13 @@ const WithdrawForm = ({ bountyAddress }) => {
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col justify-between h-full p-4"
       >
-        <div className="mb-3">Claimable {formatEther(myDeposit)}</div>
         <Input
-          label="Add funds"
+          label={
+            <div className="mb-3 flex">
+              <div className="mr-1">Claim up to</div>{" "}
+              <ETH amount={formatEther(myDeposit)} />
+            </div>
+          }
           type="text"
           placeholder="0.5"
           {...register("amount", { required: true })}
@@ -213,7 +225,7 @@ const AnswerForm = ({ bountyAddress }) => {
         />
 
         <Button className="self-end" type="submit">
-          Submit Article
+          Submit
         </Button>
       </form>
     </>
@@ -249,9 +261,7 @@ export const Bounty = ({ bountyAddress, loading = false }) => {
         <WithdrawForm bountyAddress={bountyAddress} />
       </Card>
       <Card>
-        <Header className="min-w-max max-w-full w-1/4 py-3">
-          Submit your article
-        </Header>
+        <Header className="min-w-max max-w-full w-1/4 py-3">Submit</Header>
         <AnswerForm bountyAddress={bountyAddress} />
       </Card>
     </div>

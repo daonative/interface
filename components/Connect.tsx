@@ -7,10 +7,10 @@ import {
 import { UserRejectedRequestError as UserRejectedRequestErrorWalletConnect } from "@web3-react/walletconnect-connector";
 import { UnsupportedChainIdError, useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
-import { injected, network, walletconnect } from "../web3/connectors";
+import { injected, walletconnect } from "../web3/connectors";
 import { useEagerConnect, useInactiveListener } from "../web3/hooks";
 import { Header } from "./Header";
-import { Modal, ModalBody, ModalTitle } from "./Modal";
+import { Modal, ModalTitle } from "./Modal";
 import Button from "./Button";
 
 function getErrorMessage(error: Error) {
@@ -94,10 +94,8 @@ const Connect = () => {
         </Header>
       </button>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-        <ModalTitle>Connect</ModalTitle>
+        <ModalTitle>Connect to a wallet</ModalTitle>
         <div>
-          <Account />
-
           <ul role="list" className="my-3  w-full flex gap-3">
             {Object.keys(connectorsByName).map((name) => {
               const currentConnector = connectorsByName[name];
@@ -140,15 +138,14 @@ const Connect = () => {
           )}
           <div className={"flex"}>
             {(active || error) && (
-              <button
-                className="flex items-center w-max text-prologe-primary cursor-pointer bg-transparent font-bold ml-auto mt-6"
-                style={{ fontFamily: "Space Grotesk" }}
+              <Button
+                className="self-end"
                 onClick={() => {
                   deactivate();
                 }}
               >
                 Disconnect
-              </button>
+              </Button>
             )}
           </div>
 

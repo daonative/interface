@@ -41,11 +41,11 @@ export const Headline = ({ className }) => {
           <Link href="/app/create">
             <Button className="mt-6">Create a bounty</Button>
           </Link>
-          <a target="_blank" href="https://discord.gg/zGk5TSSyjX">
-            <Button variant="outline" className="mt-6 md:ml-3">
-              Join our discord
+          <Link href="/app/bounty/0x7ddCeaFA32393184464cd5fa245339da168633b8">
+            <Button className="mt-6 ml-3" variant="outline">
+              Example Bounty
             </Button>
-          </a>
+          </Link>
         </div>
       </main>
     </StyledMain>

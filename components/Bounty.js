@@ -104,6 +104,7 @@ const WithdrawForm = ({ bountyAddress }) => {
 
   useInterval(() => {
     if (!bountyAddress) return;
+    if (!account) return;
     getDeposit(bountyAddress);
   }, 3000);
 

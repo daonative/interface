@@ -80,7 +80,7 @@ export const callForArticles = [
     proposals: [2, 3],
     sponsors: {
       prologe: {
-        balance: 0.05,
+        balance: 0.1,
       },
     },
     description: `
@@ -97,7 +97,7 @@ export const callForArticles = [
           <li>What are the most interesting projects tackling this issue?</li>
         </ul>
     `,
-    valueLocked: 0.05,
+    valueLocked: 0.1,
     deadline: "2021-09-22",
   },
   {

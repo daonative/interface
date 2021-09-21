@@ -10,11 +10,11 @@ export const Answer = ({ article: proposal, id }) => {
     >
       <div className="flex-1 flex flex-col px-2 pt-1 pb-6">
         <div className="flex justify-between mb-2">
-          <h3 className="text-gray-400 text-xs font-medium truncate">
+          <h3 className="font-medium text-base truncate">
+            <span className="mr-1">Earned</span>
             <Image width="12" height="12" src="/ethereum-icon.svg" />
-            <span className="ml-1">{proposal.claimable.substr(0, 7)}</span>
+            <span className="">{proposal.claimable.substr(0, 7)}</span>
           </h3>
-          <h3 className="text-gray-400 text-xs font-medium"># 00{id + 1}</h3>
         </div>
         <img
           className="w-full flex-shrink-0 mx-auto "

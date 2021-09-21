@@ -41,7 +41,7 @@ export const proposalList = {
     answerToCallId: "bf6f3e99122d817fd0a5bfedc40217008d4352c5",
     createdAt: 1631601360000,
     image: "/prologepinktile.png",
-    claimable: "0.1",
+    claimable: "0.05",
     publisherAddress: "0xd5cf4f8BA432e07b5AB0250CE46d9134f3629C16",
     contentURI:
       "https://arjunnchand13.medium.com/crypto-and-the-unbanked-3e8f32be5989",
@@ -50,7 +50,7 @@ export const proposalList = {
     answerToCallId: "bf6f3e99122d817fd0a5bfedc40217008d4352c5",
     createdAt: 1632241755883,
     image: "/buildingpinktiles.png",
-    claimable: "0.1",
+    claimable: "0.05",
     publisherAddress: "0x09cc4B3a27E3715596c5eDE07E95Da490340D27a",
     contentURI:
       "https://thoughtful-drifter-b17.notion.site/Crypto-and-the-Unbaked-df41fd0d48194c40bdd01ea057f0821c",

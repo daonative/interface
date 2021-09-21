@@ -59,24 +59,22 @@ function App() {
         title="prologe.press | Invest in content"
         description="Invest in content and get a stake in the content's success"
       />
-      <div className="relative subpixel-antialiased ">
-        <NoiseBackground />
-        <div className="relative h-full grid md:grid-cols-16 py-6 md:py-14 px-4 md:px-0 ">
-          <div className="md:col-start-4 md:col-end-14">
-            <div className="flex items-center justify-between">
-              <LandingNav />
-              <A
-                className="bluebar md:hidden"
-                target="_blank"
-                href="https://discord.gg/rf837mkdBW"
-              >
-                join our discord
-              </A>
-            </div>
+      <NoiseBackground />
+      <div className="relative h-full grid md:grid-cols-16 py-6 md:py-14 px-4 md:px-0 ">
+        <div className="md:col-start-4 md:col-end-14">
+          <div className="flex items-center justify-between">
+            <LandingNav />
+            <A
+              className="bluebar md:hidden"
+              target="_blank"
+              href="https://discord.gg/rf837mkdBW"
+            >
+              join our discord
+            </A>
           </div>
-          <div className={`md:col-start-4 md:col-end-14 py-2 px-0 row-start-2`}>
-            <Headline />
-          </div>
+        </div>
+        <div className={`md:col-start-4 md:col-end-14 py-2 px-0 row-start-2`}>
+          <Headline />
         </div>
       </div>
     </>

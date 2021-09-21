@@ -6,7 +6,6 @@ import { BountyCreator } from "../../components/BountyDashboard";
 import CreateSteps from "../../components/Steps";
 import { LandingNav } from "../../components/LandingNav";
 
-
 const Background = () => {
   return (
     <div className="fixed top-0 h-screen w-screen bg-prologe-white">
@@ -48,27 +47,23 @@ const Create = () => {
         }}
       />
 
-      <div className="relative subpixel-antialiased ">
-        <Background />
-        <div className="relative h-full grid md:grid-cols-16 md:px-0">
+      <Background />
+      <div className="relative h-full grid md:grid-cols-16 md:px-0">
+        <div
+          className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
+        >
           <div
-            className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
+            className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-1/4`}
           >
-            <div
-              className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-1/4`}
-            >
-              <div className="p-4 md:pl-8">
-                <LandingNav />
-                <Connect />
-              </div>
+            <div className="p-4 md:pl-8">
+              <LandingNav />
+              <Connect />
             </div>
           </div>
-          <div
-            className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}
-          >
-            <CreateSteps />
-            <BountyCreator />
-          </div>
+        </div>
+        <div className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}>
+          <CreateSteps />
+          <BountyCreator />
         </div>
       </div>
     </>

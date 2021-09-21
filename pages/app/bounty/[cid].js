@@ -263,48 +263,44 @@ const Calls = ({ call, bountyAddress }) => {
         }}
       />
 
-      <div className="relative subpixel-antialiased ">
-        <Background />
-        <div className="relative h-full grid md:grid-cols-16 md:px-0">
+      <Background />
+      <div className="relative h-full grid md:grid-cols-16 md:px-0">
+        <div
+          className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
+        >
           <div
-            className={`md:row-start-1 md:col-start-1 md:col-end-4 py-4 flex justify-between`}
+            className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-full md:w-1/4`}
           >
-            <div
-              className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-full md:w-1/4`}
-            >
-              <div className="p-4 md:pl-8">
-                <LandingNav />
-                <Connect />
-              </div>
+            <div className="p-4 md:pl-8">
+              <LandingNav />
+              <Connect />
             </div>
           </div>
-          <div
-            className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}
-          >
-            <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
-              <CallSummary
-                title={call?.title}
-                valueLocked={<ValueLocked bountyAddress={cid} />}
-                deadline={call?.deadline}
-                cta={call?.cta}
-              />
-            </Card>
-
-            <CallDescription className="mb-3" description={call?.description} />
-            <AnswerList className="mb-3" bountyAddress={cid} />
-          </div>
-          <div className="md:col-start-13 md:col-end-17 py-2 px-2 md:px-8">
-            <Bounty bountyAddress={cid} />
-            <CallMeta
-              className="mb-3"
-              abstractDeadline={call?.abstractDeadline}
-              wordCount={call?.wordCount}
+        </div>
+        <div className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}>
+          <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
+            <CallSummary
+              title={call?.title}
+              valueLocked={<ValueLocked bountyAddress={cid} />}
+              deadline={call?.deadline}
+              cta={call?.cta}
             />
+          </Card>
 
-            {call?.sponsors?.length > 0 && (
-              <SponsorList className="mb-3" sponsors={call?.sponsors} />
-            )}
-          </div>
+          <CallDescription className="mb-3" description={call?.description} />
+          <AnswerList className="mb-3" bountyAddress={cid} />
+        </div>
+        <div className="md:col-start-13 md:col-end-17 py-2 px-2 md:px-8">
+          <Bounty bountyAddress={cid} />
+          <CallMeta
+            className="mb-3"
+            abstractDeadline={call?.abstractDeadline}
+            wordCount={call?.wordCount}
+          />
+
+          {call?.sponsors?.length > 0 && (
+            <SponsorList className="mb-3" sponsors={call?.sponsors} />
+          )}
         </div>
       </div>
     </>

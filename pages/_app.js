@@ -42,7 +42,9 @@ export default function MyApp({ Component, pageProps }) {
   if (loading) return <BountyLoader />;
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
+            <div className="relative subpixel-antialiased ">
       <Component {...pageProps} />
+      </div>
     </Web3ReactProvider>
   );
 }

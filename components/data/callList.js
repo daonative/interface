@@ -77,7 +77,7 @@ export const callForArticles = [
       .update("Crypto and the unbanked")
       .digest("hex"),
     title: "Crypto and the unbanked",
-    proposals: [2],
+    proposals: [2, 3],
     sponsors: {
       prologe: {
         balance: 0.05,

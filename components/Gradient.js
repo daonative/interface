@@ -12,7 +12,7 @@ export const FilmNoise = styled.div`
     background-repeat: repeat;
 
     content: "";
-    opacity: 0.2;
+    opacity: 0.3;
     position: absolute;
     top: -50%;
     left: -50%;
@@ -70,7 +70,7 @@ export const Gradient = styled.div`
     background-position-y: bottom;
     background-position-x: left;
     background-size: cover;
-    background-image: url(/desktop-gradient.svg);
+    background-image: url(/best-gradient.svg);
  
   }
 `;

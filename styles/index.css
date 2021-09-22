@@ -24,47 +24,15 @@ div#__next > div {
     grid-template-rows: 1fr 4fr;
   }
 
-  ul > li:before {
-    margin-right: 8px;
-    width: 1.3rem;
-  }
 }
 @media (min-width: 1536px) {
   .magic-grid {
     grid-template-rows: 1fr 3fr;
   }
 }
-
-h1 {
-  line-height: 110%;
-  font-size: clamp(2.2rem, 4.9vw, 6rem);
-}
-
-h2 {
-  font-size: clamp(1rem, 1.1vw, 2.1rem);
-  font-family: Archivo;
-}
-h3 {
-  font-size: clamp(1.4rem, 1.5vw, 3rem);
-}
-
 body,
 element {
-  margin: 0;
-  font-family: "Archivo", sans-serif;
   font-feature-settings: "liga" off;
-  font-size: clamp(0.9rem, 1vw, 1.2rem);
-}
-
-p,
-li {
-  font-family: "Archivo", sans-serif;
-  font-size: clamp(0.8rem, 1vw, 1.3rem);
-  font-weight: 300;
-}
-
-small {
-  font-family: "Archivo", sans-serif;
 }
 
 .bluebar::after {
@@ -75,25 +43,6 @@ small {
   position: absolute;
   width: 0%;
   background-color: #3200f5;
-  animation: stretchwidth 1s;
-  animation-fill-mode: forwards;
-  animation-delay: 1300ms;
-}
-
-.animate-underline {
-  position: relative;
-  font-family: inherit;
-}
-.animate-underline:after {
-  content: "";
-  height: 10%;
-  bottom: 1%;
-  left: 0;
-  display: flex;
-  position: absolute;
-  width: 0%;
-  background-color: #3200f5;
-  z-index: -1;
   animation: stretchwidth 1s;
   animation-fill-mode: forwards;
   animation-delay: 1300ms;

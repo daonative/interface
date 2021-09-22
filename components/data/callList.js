@@ -89,7 +89,7 @@ export const callForArticles = [
           to see an article that answers:
         </p>
         <ul>
-          <li>What has been achieved until now? </li>
+          <li>What has been achieved until now?</li>
           <li>
             What are the missing pieces to enable the unbanked to take part in
             the new world economy?

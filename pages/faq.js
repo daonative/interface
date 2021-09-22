@@ -4,6 +4,7 @@ import { ChevronDownIcon } from "@heroicons/react/outline";
 import { Card } from "../components/Card";
 import { FilmNoise, Gradient } from "../components/Gradient";
 import { Nav } from "../components/Nav";
+import Link from "next/link";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -56,12 +57,6 @@ const Background = () => {
   return (
     <FilmNoise className="fixed top-0 ">
       <Gradient />
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed right-1/4 top-0`}
-      ></div>
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed left-1/4 top-0`}
-      ></div>
     </FilmNoise>
   );
 };
@@ -75,7 +70,11 @@ export default function FAQ() {
         <div
           className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
         >
-          <Nav />
+          <Link href="/">
+            <a>
+              <Nav />
+            </a>
+          </Link>
         </div>
         <div
           className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 md:row-end-2`}

@@ -16,12 +16,6 @@ const Background = () => {
   return (
     <div className="fixed top-0 h-screen w-screen bg-prologe-white">
       <Gradient />
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed right-1/4 top-0`}
-      ></div>
-      <div
-        className={`hidden lg:block h-screen border-r-prologe border-prologe-primary border-opacity-25 fixed left-1/4 top-0`}
-      ></div>
     </div>
   );
 };
@@ -57,52 +51,48 @@ const Calls = ({ call }) => {
         }}
       />
 
-      <div className="relative subpixel-antialiased ">
-        <Background />
-        <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
-          <div
-            className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
-          >
-            <Link href="/">
+      <Background />
+      <div className="relative h-full grid md:grid-cols-16 md:py-14 px-2 md:px-0">
+        <div
+          className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
+        >
+          <Link href="/">
+            <a>
               <Nav />
-            </Link>
-          </div>
-          <div
-            className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
-          >
-            <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
-              <CallSummary
-                title={call?.title}
-                valueLocked={call?.valueLocked}
-                deadline={call?.deadline}
-                cta={call?.cta}
-              />
-            </Card>
-
-            <CallDescription className="mb-3" description={call?.description} />
-            <AnswerList
-              className="mb-3"
-              articles={call?.proposals?.map(
-                (proposalId) => proposalList?.[proposalId]
-              )}
+            </a>
+          </Link>
+        </div>
+        <div
+          className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
+        >
+          <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
+            <CallSummary
+              title={call?.title}
+              valueLocked={call?.valueLocked}
+              deadline={call?.deadline}
+              cta={call?.cta}
             />
-          </div>
-          <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
-            {!isInThePast(call?.deadline) && (
-              <SubmitArticleForm
-                className="mb-3"
-                id={cid}
-                title={call?.title}
-              />
+          </Card>
+
+          <CallDescription className="mb-3" description={call?.description} />
+          <AnswerList
+            className="mb-3"
+            articles={call?.proposals?.map(
+              (proposalId) => proposalList?.[proposalId]
             )}
-            <CallMeta
-              className="mb-3"
-              abstractDeadline={call?.abstractDeadline}
-              wordCount={call?.wordCount}
-            />
+          />
+        </div>
+        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
+          {!isInThePast(call?.deadline) && (
+            <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+          )}
+          <CallMeta
+            className="mb-3"
+            abstractDeadline={call?.abstractDeadline}
+            wordCount={call?.wordCount}
+          />
 
-            <SponsorList className="mb-3" sponsors={call?.sponsors} />
-          </div>
+          <SponsorList className="mb-3" sponsors={call?.sponsors} />
         </div>
       </div>
     </>

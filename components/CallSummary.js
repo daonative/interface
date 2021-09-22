@@ -43,7 +43,7 @@ export const CallSummary = ({
     <div className={className}>
       <div className="flex flex-col">
         <section className="grid grid-cols-6">
-          <h3 className="my-5 pl-4 md:px-8 col-start-1 col-end-6">{title}</h3>
+          <h3 className="text-lg my-5 pl-4 md:px-8 col-start-1 col-end-6">{title}</h3>
           <div className="border-l-prologe border-prologe-primary border-opacity-25 col-start-6 col-span-1 flex items-center justify-center">
             <ValueLocked valueLocked={valueLocked} />
           </div>

@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   mode: "jit",
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
@@ -5,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        archivo: ["'Archivo', sans-serif"],
+        sans: ["Archivo", ...defaultTheme.fontFamily.sans],
       },
       gridTemplateColumns: {
         // Simple 16 column grid
@@ -53,8 +55,9 @@ module.exports = {
       },
     },
   },
+  plugins: [require("@tailwindcss/forms"), require("@tailwindcss/typography")],
+
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/forms")],
 };

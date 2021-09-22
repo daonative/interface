@@ -2,7 +2,7 @@ import { Logo } from "./Logo";
 import A from "./A";
 
 // check nav in mobile browser before refactoring
-export const Nav = ({className}) => {
+export const Nav = ({ className }) => {
   return (
     <div className={`flex ${className}`}>
       <div className="relative flex flex-col justify-center items-center ">

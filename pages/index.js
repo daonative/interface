@@ -1,17 +1,31 @@
 import Link from "next/link";
 import { Gradient } from "../components/Gradient";
 import { AnimatedLogo } from "../components/AnimatedLogo";
+import styled from "styled-components";
 
 import { CallList } from "../components/CallList";
 import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import { NextSeo } from "next-seo";
+import { NoiseBackground } from "../components/NoiseBackground";
+import { Navigation } from "../components/Navigation";
+
+const H1 = styled.h1`
+  font-family: "Space Grotesk";
+  line-height: 110%;
+  font-size: clamp(2.2rem, 4.9vw, 6rem);
+`;
+
+const H2 = styled.h2`
+  font-size: clamp(1rem, 1.1vw, 2.1rem);
+  font-family: Archivo;
+`;
 
 export const Headline = () => {
   return (
     <StyledMain>
-      <main className="mt-auto md:mt-0">
-        <h1
+      <main className="mt-auto md:mt-0 ">
+        <H1
           className="mb-6"
           style={{ fontFamily: "Space Grotesk", fontWeight: 600 }}
         >
@@ -20,9 +34,9 @@ export const Headline = () => {
             closed beta
           </span>
           <br />
-        </h1>
-        <h2 className="mb-2">Let's change the way information gets funded.</h2>
-        <h2>
+        </H1>
+        <H2 className="mb-2">Let's change the way information gets funded.</H2>
+        <H2>
           <span className="font-bold mb-2">{`How it works`}</span>
           <ol className="list-decimal list-inside">
             <>
@@ -34,7 +48,7 @@ export const Headline = () => {
               <li>Earn crypto proportional to votes and locked value </li>
             </>
           </ol>
-        </h2>
+        </H2>
         <div className="flex">
           <a target="_blank" href="https://discord.gg/zGk5TSSyjX">
             <Button className="mt-6">Get Early Access</Button>
@@ -70,16 +84,14 @@ export default function Home() {
       {
         // LeftPane
       }
-      <section className=" h-full  md:fixed md:max-w-1/2 z-20 bg-prologe-white">
-        <div className="absolute w-full h-full ">
-          <Gradient />
-        </div>
+      <section className="h-full md:fixed md:max-w-1/2 z-20 overflow-hidden relative">
+        <Gradient />
 
         <div className="relative h-full grid md:grid-cols-12">
           <div
-            className={`md:col-start-2 md:col-end-12 h-full pt-3 py-6 md:py-14 px-4 md:px-0 magic-grid`}
+            className={`md:col-start-2 md:col-end-12 h-full pt-3 py-6 md:py-6 md:py-14 px-4 md:px-0 magic-grid`}
           >
-            <LandingNav />
+            <Navigation />
             <Headline />
           </div>
         </div>

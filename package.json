@@ -35,10 +35,11 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-hook-form": "^7.15.3",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/forms": "^0.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
     "tailwindcss": "^2.2.7",

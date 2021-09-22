@@ -36,6 +36,8 @@ export default class MyDocument extends Document {
             data-domain="prologe.press"
             src="https://plausible.io/js/plausible.js"
           />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
           <meta property="og:image" content="/prologe-seo.png" />
           <meta property="twitter:image" content="/prologe-seo.png" />
         </Head>

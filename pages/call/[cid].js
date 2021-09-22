@@ -10,6 +10,7 @@ import { proposalList } from "../../components/data/proposalList";
 import { SponsorList } from "../../components/SponsorList";
 import { NextSeo } from "next-seo";
 import { CallMeta } from "../../components/CallMeta";
+import Link from "next/link";
 
 const Background = () => {
   return (
@@ -28,6 +29,11 @@ const Background = () => {
 const Calls = ({ call }) => {
   const cid = call?.id;
   const description = call?.description?.replace(/<[^>]*>?/gm, "");
+  const isInThePast = (firstDate) => {
+    const deadline = new Date(firstDate);
+    return deadline.setHours(0, 0, 0, 0) <= new Date().setHours(0, 0, 0, 0);
+  };
+
   return (
     <>
       <NextSeo
@@ -57,7 +63,9 @@ const Calls = ({ call }) => {
           <div
             className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
           >
-            <Nav />
+            <Link href="/">
+              <Nav />
+            </Link>
           </div>
           <div
             className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
@@ -80,7 +88,13 @@ const Calls = ({ call }) => {
             />
           </div>
           <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
-            <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+            {!isInThePast(call?.deadline) && (
+              <SubmitArticleForm
+                className="mb-3"
+                id={cid}
+                title={call?.title}
+              />
+            )}
             <CallMeta
               className="mb-3"
               abstractDeadline={call?.abstractDeadline}

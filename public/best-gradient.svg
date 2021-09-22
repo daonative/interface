@@ -1,15 +1,17 @@
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0)">
-<rect width="1920" height="1080" fill="white"/>
-<path opacity="0.15" d="M0 -2980H2800V1080H0V-2980Z" fill="url(#paint0_radial)"/>
-</g>
-<defs>
-<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.00012291 1080) scale(2062.08 1666.62)">
-<stop stop-color="#1D33F5"/>
-<stop offset="1" stop-color="#F5481D" stop-opacity="0"/>
-</radialGradient>
-<clipPath id="clip0">
-<rect width="1920" height="1080" fill="white"/>
-</clipPath>
-</defs>
+    <g clip-path="url(#clip0)">
+        <rect width="1920" height="1080" fill="white" />
+        <path opacity="0.15" d="M0 -2980H2800V1080H0V-2980Z" fill="url(#paint0_radial)" />
+    </g>
+    <defs>
+        <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.00012291 1080) scale(2062.08 1666.62)">
+            <stop stop-color="#1D33F5" />
+            <stop offset="1" stop-color="#F5481D" stop-opacity="0" />
+
+            <stop offset="2" stop-color="white" stop-opacity="0" />
+        </radialGradient>
+        <clipPath id="clip0">
+            <rect width="1920" height="1080" fill="white" />
+        </clipPath>
+    </defs>
 </svg>

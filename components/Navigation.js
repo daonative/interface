@@ -4,7 +4,7 @@ import A from "./A";
 
 export function Navigation() {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between flex-wrap mb-3">
       <LandingNav />
       <div className="flex items-center gap-5">
         <a href="https://blog.prologe.press">blog</a>

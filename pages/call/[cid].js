@@ -65,7 +65,7 @@ const Calls = ({ call }) => {
         <div
           className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 `}
         >
-          <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
+          <Card className="mb-3 ">
             <CallSummary
               title={call?.title}
               valueLocked={call?.valueLocked}

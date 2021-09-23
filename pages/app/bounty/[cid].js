@@ -278,7 +278,7 @@ const Calls = ({ call, bountyAddress }) => {
           </div>
         </div>
         <div className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}>
-          <Card className="mb-3 border-prologe border-prologe-primary border-opacity-25">
+          <Card className="mb-3">
             <CallSummary
               title={call?.title}
               valueLocked={<ValueLocked bountyAddress={cid} />}

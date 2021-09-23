@@ -16,7 +16,7 @@ export const CallList = () => {
             return (
               <Card
                 key={call.id}
-                className="mb-2 "
+                className="mb-2 border-prologe border-prologe-primary border-opacity-25"
               >
                 <Link href={`/call/${call.id}`}>
                   <li className="cursor-pointer">

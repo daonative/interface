@@ -159,7 +159,7 @@ const Calls = ({ call }) => {
                         </li>
                         <li data-line="3">
                           readers get{" "}
-                          <strong>stake in the content's success</strong> by
+                          <strong>a stake in the content's success</strong> by
                           owning a share of the funded content
                         </li>
                       </ul>

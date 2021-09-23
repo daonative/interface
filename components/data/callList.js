@@ -56,24 +56,6 @@ export const callForArticles = [
   {
     id: crypto
       .createHash("sha1")
-      .update(
-        "A complete guide of hiring in DeFi: employee vs freelance vs grant distribution"
-      )
-      .digest("hex"),
-
-    title:
-      "A complete guide of hiring in DeFi: employee vs freelance vs grant distribution",
-    valueLocked: 0.025,
-    deadline: "2021-09-22",
-    sponsors: {
-      prologe: {
-        balance: 0.05,
-      },
-    },
-  },
-  {
-    id: crypto
-      .createHash("sha1")
       .update("Crypto and the unbanked")
       .digest("hex"),
     title: "Crypto and the unbanked",
@@ -107,7 +89,7 @@ export const callForArticles = [
       .digest("hex"),
     title: "Top 100 DeFi projects + mapping",
     valueLocked: "0.020",
-    deadline: "2021-09-22",
+    deadline: "2021-10-05",
     sponsors: {
       prologe: {
         balance: 0.015,

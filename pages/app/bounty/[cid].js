@@ -18,7 +18,6 @@ import moment from "moment";
 import { useForm } from "react-hook-form";
 import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../../components/TransactionModal";
-import { Input } from "../../../components/Input";
 import { Loader } from "../../../components/Loader";
 import { Background } from "../../../components/Background";
 import { LandingNav } from "../../../components/LandingNav";
@@ -277,7 +276,7 @@ const Calls = ({ call, bountyAddress }) => {
             </div>
           </div>
         </div>
-        <div className={`md:col-start-5 md:col-end-13 py-2 px-0 px-2 md:px-8 `}>
+        <div className={`md:col-start-5 md:col-end-13 py-2 px-2 px-2 md:px-8 `}>
           <Card className="mb-3">
             <CallSummary
               title={call?.title}

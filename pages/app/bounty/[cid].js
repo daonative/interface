@@ -20,7 +20,7 @@ import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../../components/TransactionModal";
 import { Loader } from "../../../components/Loader";
 import { Background } from "../../../components/Background";
-import { LandingNav } from "../../../components/LandingNav";
+import { Navigation } from "../../../components/Navigation";
 
 const VotingForm = ({ bountyAddress, answerId }) => {
   const {
@@ -271,7 +271,7 @@ const Calls = ({ call, bountyAddress }) => {
             className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-full md:w-1/4`}
           >
             <div className="p-4 md:pl-8">
-              <LandingNav />
+              <Navigation />
               <Connect />
             </div>
           </div>

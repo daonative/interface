@@ -10,10 +10,11 @@ const H1 = styled.h1`
   font-family: "Space Grotesk";
   font-weight: 800;
   font-size: clamp(2.2rem, 5.2vw, 4rem);
+  line-height: 100%;
 `;
 
 const H2 = styled.h2`
-  font-size: clamp(1rem, 1.3vw, 3.1rem);
+  font-size: clam(1rem, 1.3vw, 3.1rem);
 `;
 
 export const Headline = ({ className }) => {
@@ -72,4 +73,3 @@ function App() {
 }
 
 export default App;
-

@@ -4,18 +4,19 @@ import { CallSummary } from "../../components/CallSummary";
 import { AnswerList } from "../../components/AnswerList";
 import { SubmitArticleForm } from "../../components/SubmitArticleForm";
 import { CallDescription } from "../../components/CallDescription";
-import { Nav } from "../../components/Nav";
 import { callForArticles } from "../../components/data/callList";
 import { proposalList } from "../../components/data/proposalList";
 import { SponsorList } from "../../components/SponsorList";
 import { NextSeo } from "next-seo";
 import { CallMeta } from "../../components/CallMeta";
 import Link from "next/link";
+import { Navigation } from "../../components/Navigation";
+import { NoiseBackground } from "../../components/NoiseBackground";
 
 const Background = () => {
   return (
     <div className="fixed top-0 h-screen w-screen bg-prologe-white">
-      <Gradient />
+      <NoiseBackground />
     </div>
   );
 };
@@ -58,7 +59,7 @@ const Calls = ({ call }) => {
         >
           <Link href="/">
             <a>
-              <Nav />
+              <Navigation />
             </a>
           </Link>
         </div>

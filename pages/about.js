@@ -1,9 +1,7 @@
-import { Card } from "../components/Card";
-import { Gradient } from "../components/Gradient";
 import { Nav } from "../components/Nav";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
 import { NoiseBackground } from "../components/NoiseBackground";
+import { Navigation } from "../components/Navigation";
 
 const Background = () => {
   return (
@@ -13,7 +11,7 @@ const Background = () => {
   );
 };
 
-const Calls = ({ call }) => {
+const About = () => {
   const title = "DAOs are the next big media companies but without an agenda.";
   const description = `Who gets to write and curate content has been controlled by wealthy patrons and media conglomerates.
 
@@ -49,11 +47,7 @@ const Calls = ({ call }) => {
         <div
           className={`md:col-start-2 md:col-end-4 py-8 md:py-0 px-6 md:px-0`}
         >
-          <Link href="/">
-            <a>
-              <Nav />
-            </a>
-          </Link>
+          <Navigation />
         </div>
         <div
           className={`md:col-start-5 md:col-end-15 px-0 md:px-8 md:row-start-1 `}
@@ -184,4 +178,4 @@ const Calls = ({ call }) => {
   );
 };
 
-export default Calls;
+export default About;

@@ -1,6 +1,6 @@
 <svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0)">
-        <rect width="1920" height="1080" fill="white" />
+        <rect width="1920" height="1080" fill="#FAFAFA" />
         <path opacity="0.15" d="M0 -2980H2800V1080H0V-2980Z" fill="url(#paint0_radial)" />
     </g>
     <defs>

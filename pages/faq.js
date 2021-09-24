@@ -5,6 +5,7 @@ import { Card } from "../components/Card";
 import { FilmNoise, Gradient } from "../components/Gradient";
 import { Nav } from "../components/Nav";
 import Link from "next/link";
+import { Navigation } from "../components/Navigation";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -70,11 +71,7 @@ export default function FAQ() {
         <div
           className={`md:col-start-2 md:col-end-5 py-8 md:py-0 px-6 md:px-0`}
         >
-          <Link href="/">
-            <a>
-              <Nav />
-            </a>
-          </Link>
+          <Navigation />
         </div>
         <div
           className={`md:col-start-5 md:col-end-13 px-0 md:px-8 md:row-start-1 md:row-end-2`}

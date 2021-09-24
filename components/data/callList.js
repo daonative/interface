@@ -107,8 +107,9 @@ export const callForArticles = [
         balance: 0.015,
       },
     },
-    valueLocked: "0.015",
-    deadline: "2021-09-30",
+    valueLocked: "0.1",
+    deadline: "2021-11-01",
+    abstractDeadline: "2021-10-15",
     description: `
         At which levels can your article/information on the internet get
         censored? For example:

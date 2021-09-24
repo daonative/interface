@@ -7,8 +7,8 @@ export const callForArticles = [
       .update("How to make quality crypto content?")
       .digest("hex"),
     valueLocked: 0.2,
-    deadline: "2021-10-01",
-    abstractDeadline: "2021-09-25",
+    deadline: "2021-11-01",
+    abstractDeadline: "2021-10-15",
     wordCount: "250 - 1000",
     title: "How to make quality crypto content?",
     sponsors: {

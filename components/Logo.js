@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styled from "styled-components";
 
 export const BLUE = "#3200F5";

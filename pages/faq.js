@@ -3,8 +3,6 @@ import { ChevronDownIcon } from "@heroicons/react/outline";
 
 import { Card } from "../components/Card";
 import { FilmNoise, Gradient } from "../components/Gradient";
-import { Nav } from "../components/Nav";
-import Link from "next/link";
 import { Navigation } from "../components/Navigation";
 
 function classNames(...classes) {

@@ -4,7 +4,6 @@ import { NextSeo } from "next-seo";
 import { NoiseBackground } from "../../components/NoiseBackground";
 import { BountyCreator } from "../../components/BountyDashboard";
 import CreateSteps from "../../components/Steps";
-import { LandingNav } from "../../components/LandingNav";
 
 const Background = () => {
   return (
@@ -56,7 +55,7 @@ const Create = () => {
             className={`border-b-prologe border-prologe-light border-opacity-75 md:fixed h-30 w-1/4`}
           >
             <div className="p-4 md:pl-8">
-              <LandingNav />
+              <Navigation />
               <Connect />
             </div>
           </div>

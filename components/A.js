@@ -7,6 +7,7 @@ const StyledA = styled.a`
   font-size: clamp(0.9rem, 1.3vw, 1.6rem);
   position: relative;
   display: flex;
+  width: max-content;
 `;
 
 export default StyledA;

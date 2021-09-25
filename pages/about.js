@@ -1,4 +1,3 @@
-import { Nav } from "../components/Nav";
 import { NextSeo } from "next-seo";
 import { NoiseBackground } from "../components/NoiseBackground";
 import { Navigation } from "../components/Navigation";

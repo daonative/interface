@@ -11,11 +11,10 @@ export const StyledNav = styled.div`
 export const Logo = () => {
   return (
     <StyledNav>
-      <span className="font-semibold">prologe</span>
+      <span className="font-extralight">prlg</span>
       <span className="font-bold" style={{ color: BLUE }}>
         .
       </span>
-      <span className="font-light">press</span>
     </StyledNav>
   );
 };

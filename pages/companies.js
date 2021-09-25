@@ -4,9 +4,8 @@ import { StyledMain } from "../components/StyledMain";
 import Button from "../components/Button";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
-import { AnimatedLogo } from "../components/AnimatedLogo";
 import { NoiseBackground } from "../components/NoiseBackground";
-import { LandingNav } from "../components/LandingNav";
+import { Navigation } from "../components/Navigation";
 
 const H1 = styled.h1`
   font-family: "Space Grotesk";
@@ -47,8 +46,6 @@ export const Headline = ({ className }) => {
   );
 };
 
-
-
 export default function Companies() {
   return (
     <>
@@ -65,8 +62,8 @@ export default function Companies() {
           <div
             className={`md:col-start-3 md:col-end-15 h-full px-8 md:px-0 magic-grid`}
           >
-            <LandingNav />
-            <Headline  />
+            <Navigation />
+            <Headline />
           </div>
         </div>
       </div>

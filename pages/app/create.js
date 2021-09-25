@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import { NoiseBackground } from "../../components/NoiseBackground";
 import { BountyCreator } from "../../components/BountyDashboard";
 import CreateSteps from "../../components/Steps";
+import { Navigation } from "../../components/Navigation";
 
 const Background = () => {
   return (

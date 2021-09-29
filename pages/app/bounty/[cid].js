@@ -1,6 +1,5 @@
 import { Card } from "../../../components/Card";
 import { CallSummary } from "../../../components/CallSummary";
-import { CallDescription } from "../../../components/CallDescription";
 import { Bounty } from "../../../components/Bounty";
 import { SponsorList } from "../../../components/SponsorList";
 import Connect from "../../../components/Connect";
@@ -21,6 +20,22 @@ import { TransactionModal } from "../../../components/TransactionModal";
 import { Loader } from "../../../components/Loader";
 import { Background } from "../../../components/Background";
 import { Navigation } from "../../../components/Navigation";
+import ReactMarkdown from "react-markdown";
+
+export const CallDescription = ({ description, className }) => {
+  if (!description) return null;
+
+  return (
+    <Card className={`p-8 pt-16 relative ${className}`}>
+      <Header className="absolute top-0 left-0 min-w-max w-1/4 py-3">
+        Description
+      </Header>
+      <ReactMarkdown className="prose prose-indigo prose-sm text-gray-500 lg:max-w-none">
+        {description}
+      </ReactMarkdown>
+    </Card>
+  );
+};
 
 const VotingForm = ({ bountyAddress, answerId }) => {
   const {
@@ -101,7 +116,7 @@ const VotingForm = ({ bountyAddress, answerId }) => {
   );
 };
 
-const Answer = ({ answer, id, bountyAddress }) => {
+const Answer = ({ answer, bountyAddress }) => {
   if (!answer) return null;
   return (
     <li

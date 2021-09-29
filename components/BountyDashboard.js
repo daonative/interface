@@ -1,5 +1,5 @@
 import { useWeb3React } from "@web3-react/core";
-import { ethers, providers } from "ethers";
+import { ethers } from "ethers";
 import Button from "./Button";
 import { useEffect, useState } from "react";
 import bountyCreatorAbi from "../abi/bountyCreator.json";
@@ -17,7 +17,6 @@ const { BOUNTY_CREATOR_ADDRESS } = process.env;
 
 export const BountyList = () => {
   const [bounties, setBounties] = useState([]);
-  const { library } = useWeb3React();
 
   const getBounties = async () => {
     const alchemyApiKey = process.env.INFURA_API_KEY;
@@ -77,7 +76,7 @@ export const BountyCreator = () => {
     router.push(`/app/bounty/${bountyAddress}`);
   }, [bountyAddress]);
 
-  const createBounty = async ({ title, deadline }) => {
+  const createBounty = async ({ title = "", deadline, description = "" }) => {
     const bountyCreator = new ethers.Contract(
       BOUNTY_CREATOR_ADDRESS,
       bountyCreatorAbi,
@@ -86,7 +85,7 @@ export const BountyCreator = () => {
 
     const result = await axios.post("/api/ipfs", {
       title,
-      description: "",
+      description,
       deadline,
     });
     setBountyLoading(true);
@@ -161,6 +160,19 @@ export const BountyCreator = () => {
                 min={formatDate(DateTime.local().plus({ days: 1 }))}
                 {...register("deadline", { required: true })}
               />
+              <label
+                htmlFor="description"
+                className="block text-sm font-medium text-gray-600 "
+              >
+                Description
+              </label>
+              <div className="mt-1 flex rounded-md shadow-sm mb-3">
+                <textarea
+                  type="text"
+                  className="flex-1 min-w-0 block w-full px-3 py-2 focus:ring-prologe-primary focus:border-prologe-primary sm:text-sm border-prologe-light"
+                  {...register("description", { required: true })}
+                />
+              </div>
               {account && (
                 <Button className="self-end" type="submit" value="Submit">
                   Create Bounty

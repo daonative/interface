@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
-import { ethers, providers } from "ethers";
+import { ethers } from "ethers";
 import Button from "./Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import bountyAbi from "../abi/bounty.json";
 import { Card } from "./Card";
 import { Header } from "./Header";

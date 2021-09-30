@@ -1,5 +1,4 @@
 import { Card } from "../../components/Card";
-import { Gradient } from "../../components/Gradient";
 import { CallSummary } from "../../components/CallSummary";
 import { AnswerList } from "../../components/AnswerList";
 import { SubmitArticleForm } from "../../components/SubmitArticleForm";

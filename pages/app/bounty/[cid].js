@@ -1,3 +1,12 @@
+import ReactMarkdown from "react-markdown";
+import { ethers } from "ethers";
+import axios from "axios";
+import Image from "next/image";
+import moment from "moment";
+import { useForm } from "react-hook-form";
+import { useWeb3React } from "@web3-react/core";
+import { useState } from "react";
+
 import { Card } from "../../../components/Card";
 import { CallSummary } from "../../../components/CallSummary";
 import { Bounty } from "../../../components/Bounty";
@@ -6,21 +15,13 @@ import Connect from "../../../components/Connect";
 import { NextSeo } from "next-seo";
 import { CallMeta } from "../../../components/CallMeta";
 import bountyAbi from "../../../abi/bounty.json";
-import { ethers } from "ethers";
-import axios from "axios";
-import { useState } from "react";
 import { useInterval } from "../../../components/hooks";
 import { formatEther } from "@ethersproject/units";
 import { Header } from "../../../components/Header";
-import Image from "next/image";
-import moment from "moment";
-import { useForm } from "react-hook-form";
-import { useWeb3React } from "@web3-react/core";
 import { TransactionModal } from "../../../components/TransactionModal";
 import { Loader } from "../../../components/Loader";
 import { Background } from "../../../components/Background";
 import { Navigation } from "../../../components/Navigation";
-import ReactMarkdown from "react-markdown";
 
 export const CallDescription = ({ description, className }) => {
   if (!description) return null;

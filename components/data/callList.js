@@ -10,7 +10,8 @@ export const callForArticles = [
       .digest("hex"),
     valueLocked: 300,
     currency: "usdc",
-    deadline: "2021-10-05",
+    abstractDeadline: "2021-10-05",
+    deadline: "2021-10-08",
     wordCount: "1000+",
     title:
       "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",
@@ -48,6 +49,7 @@ This article must highlight the CSV feature from Request that may be useful for 
     valueLocked: 300,
     currency: "usdc",
     deadline: "2021-10-05",
+    deadline: "2021-10-08",
     wordCount: "1000+",
     title: "A guide to crypto taxation and compliance in Europe",
     sponsors: {
@@ -84,6 +86,7 @@ The article must also highlight the ability to denominate invoices in fiat while
     valueLocked: 300,
     currency: "usdc",
     deadline: "2021-10-05",
+    deadline: "2021-10-08",
     wordCount: "1000+",
     title: "Comparing The Best Crypto Wallets for Businesses",
     sponsors: {

@@ -17,41 +17,17 @@ export const callForArticles = [
       },
     },
     description: `
-      <div>
-       <div>
-          <p class="mb-3">
-            We're building a community of crypto writers. Help the community
-            strive for the best by answering the following questions:
-          </p>
-        </div>
-        <div>
-          <ul>
-            <li data-line="0">
-              <p>Writing about crypto: what's so hard about it?</p>
-            </li>
-            <li data-line="2">
-              <p>What does it mean to write quality content?</p>
-            </li>
-            <li data-line="4">
-              <p>What are the common mistakes that people make?</p>
-            </li>
-            <li data-line="6">
-              <p>Examples of bad quality vs. good quality?</p>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p class="mt-3">
-            At prologe.press, we aim for quality over quantity. So if you
-            believe someone else covered some of these topics well in their
-            writing, give them their just dues and link to them.
-          </p>
-          <p class="mt-3">
-          Your primary focus should be to answer the call. You don't necessarily need to answer all the questions listed here above.
-          </p>
-        </div>
-      </div>
-    `,
+We're building a community of crypto writers. Help the community strive for the best by answering the following questions:
+
+*   Writing about crypto: what's so hard about it?
+*   What does it mean to write quality content?
+*   What are the common mistakes that people make?
+*   Examples of bad quality vs. good quality?
+
+At prologe.press, we aim for quality over quantity. So if you believe someone else covered some of these topics well in their writing, give them their just dues and link to them.
+
+Your primary focus should be to answer the call. You don't necessarily need to answer all the questions listed here above.
+`
   },
   {
     id: crypto
@@ -66,19 +42,12 @@ export const callForArticles = [
       },
     },
     description: `
-        <p>
-          Crypto has long been pretending to bank the unbanked. It would be nice
-          to see an article that answers:
-        </p>
-        <ul>
-          <li>What has been achieved until now?</li>
-          <li>
-            What are the missing pieces to enable the unbanked to take part in
-            the new world economy?
-          </li>
-          <li>What are the most interesting projects tackling this issue?</li>
-        </ul>
-    `,
+Crypto has long been pretending to bank the unbanked. It would be nice to see an article that answers:
+
+*   What has been achieved until now?
+*   What are the missing pieces to enable the unbanked to take part in the new world economy?
+*   What are the most interesting projects tackling this issue?
+`,
     valueLocked: 0.1,
     deadline: "2021-09-22",
   },
@@ -111,13 +80,13 @@ export const callForArticles = [
     deadline: "2021-11-01",
     abstractDeadline: "2021-10-15",
     description: `
-        At which levels can your article/information on the internet get
-        censored? For example:
-        <li>platform-level (youtube, facebook)</li>
-        <li>app-level (app stores)</li>
-        <li>server-level (public cloud at google/amazon)</li>
-        <li>domain-Level (domain providers)</li>
-    `,
+At which levels can your article/information on the internet get censored? For example:
+
+* platform-level (youtube, facebook)
+* app-level (app stores)
+* server-level (public cloud at google/amazon)
+* domain-Level (domain providers)
+`,
   },
   {
     sponsors: {
@@ -136,15 +105,13 @@ export const callForArticles = [
     valueLocked: 0.027,
     deadline: "2021-08-21",
     proposals: [0, 1],
-    description: `            <div>
-              <p >Create an article explaining:</p>
-              <ul>
-                <li>what prologe.press is</li>
-                <li>who prologe.press is for</li>
-                <li>what problem prologe.press solves </li>
-              </ul>
-            </div>
- `,
+    description: `
+
+Create an article explaining:
+
+* what prologe.press is
+* who prologe.press is for
+* what problem prologe.press solves
+`,
   },
-  ,
 ];

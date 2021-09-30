@@ -5,6 +5,36 @@ export const callForArticles = [
     id: crypto
       .createHash("sha1")
       .update(
+        "NFTs beyond visual art"
+      )
+      .digest("hex"),
+    valueLocked: 0.2,
+    currency: "eth",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "NFTs beyond visual art",
+    sponsors: {
+      "block0.ch": {
+        balance: 0.2,
+        currency: "eth",
+      },
+    },
+    description: `
+NFTs have mostly enjoyed wide adoption as a new way to collect visual art. However, the technology offers a wide variety of use cases. This article should dive a bit deeper into those use cases:
+
+* Which use cases are there out there
+* Which of those use cases have seen some adoption
+* Which platforms do those projects use
+
+The author accepts that the article will be published on the Block0 blog.
+`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update(
         "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks"
       )
       .digest("hex"),

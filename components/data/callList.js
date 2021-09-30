@@ -4,17 +4,20 @@ export const callForArticles = [
   {
     id: crypto
       .createHash("sha1")
-      .update("Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks")
+      .update(
+        "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks"
+      )
       .digest("hex"),
     valueLocked: 300,
-    currency: 'usdc',
+    currency: "usdc",
     deadline: "2021-10-05",
     wordCount: "1000+",
-    title: "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",
+    title:
+      "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",
     sponsors: {
-      'request.network': {
+      "request.network": {
         balance: 300,
-        currency: 'usdc'
+        currency: "usdc",
       },
     },
     description: `
@@ -35,7 +38,7 @@ To inform the audience about the partnership between Request and Cryptio, and ho
 This article must highlight the CSV feature from Request that may be useful for some businesses who only need to upload journal entries manually to their accounting software.
 
 *Keywords: crypto accounting, quickbooks cryptocurrency, quickbooks crypto, xero crypto, accounting software for crypto,*
-`
+`,
   },
   {
     id: crypto
@@ -43,14 +46,14 @@ This article must highlight the CSV feature from Request that may be useful for 
       .update("A guide to crypto taxation and compliance in Europe")
       .digest("hex"),
     valueLocked: 300,
-    currency: 'usdc',
+    currency: "usdc",
     deadline: "2021-10-05",
     wordCount: "1000+",
     title: "A guide to crypto taxation and compliance in Europe",
     sponsors: {
-      'request.network': {
+      "request.network": {
         balance: 300,
-        currency: 'usdc',
+        currency: "usdc",
       },
     },
     description: `
@@ -71,7 +74,7 @@ Impress upon readers (businesses and individuals) the growing importance of taxa
 The article must also highlight the ability to denominate invoices in fiat while receiving the actual payment in crypto with Request Invoicing. This feature helps businesses and individuals dealing with crypto to have a clear paper trail and to be compliant with KYC/AML, and tax laws.
 
 *Keywords: crypto tax for business, crypto tax for freelancers, crypto compliance, KYC/AML.*
-`
+`,
   },
   {
     id: crypto
@@ -79,14 +82,14 @@ The article must also highlight the ability to denominate invoices in fiat while
       .update("Comparing The Best Crypto Wallets for Businesses")
       .digest("hex"),
     valueLocked: 300,
-    currency: 'usdc',
+    currency: "usdc",
     deadline: "2021-10-05",
     wordCount: "1000+",
     title: "Comparing The Best Crypto Wallets for Businesses",
     sponsors: {
-      'request.network': {
+      "request.network": {
         balance: 300,
-        currency: 'usdc'
+        currency: "usdc",
       },
     },
     description: `
@@ -107,7 +110,7 @@ Inform the reader that using Request Invoicing allows them to easily integrate w
 The article will also mention that the Request Invoicing app is listed in Gnosis Safe App directory and that the team at Request themselves uses Gnosis, especially for doing multiple payments with their Batch Payment feature.
 
 *Keywords: crypto wallets for business, non custodial crypto wallets, crypto wallets comparison*
-`
+`,
   },
   {
     id: crypto
@@ -135,7 +138,7 @@ We're building a community of crypto writers. Help the community strive for the 
 At prologe.press, we aim for quality over quantity. So if you believe someone else covered some of these topics well in their writing, give them their just dues and link to them.
 
 Your primary focus should be to answer the call. You don't necessarily need to answer all the questions listed here above.
-`
+`,
   },
   {
     id: crypto

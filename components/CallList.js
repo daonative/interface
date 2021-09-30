@@ -23,6 +23,7 @@ export const CallList = () => {
                     <div>
                       <CallSummary
                         title={call.title}
+                        currency={call.currency}
                         valueLocked={call.valueLocked}
                         deadline={call.deadline}
                         cta={call.cta}

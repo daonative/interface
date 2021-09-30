@@ -68,6 +68,7 @@ const Calls = ({ call }) => {
           <Card className="mb-3 ">
             <CallSummary
               title={call?.title}
+              currency={call?.currency}
               valueLocked={call?.valueLocked}
               deadline={call?.deadline}
               cta={call?.cta}

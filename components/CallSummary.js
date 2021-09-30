@@ -16,12 +16,18 @@ const Deadline = ({ deadline }) => {
   );
 };
 
-const ValueLocked = ({ valueLocked }) => {
+const ValueLocked = ({ valueLocked, currency = "eth" }) => {
   return (
     <div className="flex flex-col items-center">
       <div className="flex items-center justify-between">
-        <Image width="12" height="12" src="/ethereum-icon.svg" />
-        <div className="md:ml-1">{valueLocked}</div>
+        <Image
+          alt={currency}
+          title={currency}
+          width="14"
+          height="14"
+          src={`/logo-${currency}.svg`}
+        />
+        <div className="ml-1">{valueLocked}</div>
       </div>
       <div>Locked</div>
     </div>
@@ -31,6 +37,7 @@ const ValueLocked = ({ valueLocked }) => {
 export const CallSummary = ({
   title,
   valueLocked,
+  currency,
   deadline: unformattedDeadline,
   className,
 }) => {
@@ -43,9 +50,11 @@ export const CallSummary = ({
     <div className={className}>
       <div className="flex flex-col">
         <section className="grid grid-cols-6">
-          <h3 className="text-lg my-5 pl-4 md:px-8 col-start-1 col-end-6">{title}</h3>
+          <h3 className="text-lg my-5 pl-4 md:px-8 col-start-1 col-end-6">
+            {title}
+          </h3>
           <div className="border-l-prologe border-prologe-primary border-opacity-25 col-start-6 col-span-1 flex items-center justify-center">
-            <ValueLocked valueLocked={valueLocked} />
+            <ValueLocked valueLocked={valueLocked} currency={currency} />
           </div>
           <div className="border-t-prologe border-prologe-primary border-opacity-25 w-full col-start-1 col-end-6 ">
             <Deadline deadline={deadline} />

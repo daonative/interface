@@ -8,6 +8,7 @@
             <stop stop-color="#1D33F5" />
             <stop offset="1" stop-color="#F5481D" stop-opacity="0" />
             <stop offset="2" stop-color="white" stop-opacity="0" />
+            <animate attributeName="r" dur="10000ms" values="0.2;1;0.2" repeatCount="indefinite" />
         </radialGradient>
         <clipPath id="clip0">
             <rect width="1920" height="1080" fill="white" />

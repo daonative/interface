@@ -6,13 +6,15 @@ export const callForArticles = [
       .createHash("sha1")
       .update("Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks")
       .digest("hex"),
-    valueLocked: 0.2,
+    valueLocked: 300,
+    currency: 'usdc',
     deadline: "2021-10-05",
     wordCount: "1000+",
     title: "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",
     sponsors: {
       'request.network': {
-        balance: 0.2,
+        balance: 300,
+        currency: 'usdc'
       },
     },
     description: `
@@ -40,13 +42,15 @@ This article must highlight the CSV feature from Request that may be useful for 
       .createHash("sha1")
       .update("A guide to crypto taxation and compliance in Europe")
       .digest("hex"),
-    valueLocked: 0.2,
+    valueLocked: 300,
+    currency: 'usdc',
     deadline: "2021-10-05",
     wordCount: "1000+",
     title: "A guide to crypto taxation and compliance in Europe",
     sponsors: {
       'request.network': {
-        balance: 0.2,
+        balance: 300,
+        currency: 'usdc',
       },
     },
     description: `
@@ -74,13 +78,15 @@ The article must also highlight the ability to denominate invoices in fiat while
       .createHash("sha1")
       .update("Comparing The Best Crypto Wallets for Businesses")
       .digest("hex"),
-    valueLocked: 0.2,
+    valueLocked: 300,
+    currency: 'usdc',
     deadline: "2021-10-05",
     wordCount: "1000+",
     title: "Comparing The Best Crypto Wallets for Businesses",
     sponsors: {
       'request.network': {
-        balance: 0.2,
+        balance: 300,
+        currency: 'usdc'
       },
     },
     description: `

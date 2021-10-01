@@ -13,8 +13,8 @@ export function Navigation() {
       </Link>
       <div className="flex items-center gap-5">
         <div>
-          <Link href="/app">
-            <a className="text-lg">app</a>
+          <Link href="/faq">
+            <a className="text-lg">faq</a>
           </Link>
         </div>
 

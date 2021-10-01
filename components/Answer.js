@@ -12,7 +12,7 @@ export const Answer = ({ article: proposal, id }) => {
         <div className="flex justify-between mb-2">
           <h3 className="text-sm text-base truncate">
             <span className="mr-1">Earned</span>
-            <Image width="12" height="12" src="/ethereum-icon.svg" />
+            <Image width="12" height="12" src="/logo-eth.svg" />
             <span className="">{proposal.claimable.substr(0, 7)}</span>
           </h3>
         </div>

@@ -27,7 +27,7 @@ export const SponsorList = ({ className, sponsors = {} }) => {
                   <Image
                     width="14"
                     height="14"
-                    src={`/logo-${sponsorData.currency}.svg`}
+                    src={`/logo-${sponsorData.currency || 'eth'}.svg`}
                   />
                   <div className="ml-1">{sponsorData.balance}</div>
                 </div>

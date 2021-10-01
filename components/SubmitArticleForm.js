@@ -59,7 +59,7 @@ export const SubmitArticleForm = ({ id, title, className }) => {
             type="submit"
             style={{ fontFamily: "Space Grotesk" }}
           >
-            Sumbit Article
+            Submit Article
           </button>
         </form>
       </div>

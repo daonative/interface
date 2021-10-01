@@ -21,6 +21,7 @@ export const callForArticles = [
         currency: "eth",
       },
     },
+    sponsorsWillOwnSubmissions: true,
     description: `
 NFTs have mostly enjoyed wide adoption as a new way to collect visual art. However, the technology offers a wide variety of use cases. This article should dive a bit deeper into those use cases:
 
@@ -51,6 +52,7 @@ The author accepts that the article will be published on the Block0 blog.
         currency: "usdc",
       },
     },
+    sponsorsWillOwnSubmissions: true,
     description: `
 ## What the article is about (background context):
 
@@ -88,6 +90,7 @@ This article must highlight the CSV feature from Request that may be useful for 
         currency: "usdc",
       },
     },
+    sponsorsWillOwnSubmissions: true,
     description: `
 ## What the article is about (background context):
 
@@ -125,6 +128,7 @@ The article must also highlight the ability to denominate invoices in fiat while
         currency: "usdc",
       },
     },
+    sponsorsWillOwnSubmissions: true,
     description: `
 ## What the article is about (background context):
 
@@ -160,6 +164,7 @@ The article will also mention that the Request Invoicing app is listed in Gnosis
         balance: 0.2,
       },
     },
+    sponsorsWillOwnSubmissions: true,
     description: `
 We're building a community of crypto writers. Help the community strive for the best by answering the following questions:
 

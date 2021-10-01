@@ -20,7 +20,7 @@ const Deadline = ({ deadline }) => {
   );
 };
 
-export const CallMeta = ({ abstractDeadline, wordCount, className }) => {
+export const CallMeta = ({ abstractDeadline, wordCount, sponsorsWillOwnSubmissions, className }) => {
   if (!wordCount && !abstractDeadline) return null;
   return (
     <Card className={`${className}`}>
@@ -32,6 +32,11 @@ export const CallMeta = ({ abstractDeadline, wordCount, className }) => {
             <InfoTitle>Word count</InfoTitle>
             <div className="ml-3">{wordCount}</div>
           </div>
+          { sponsorsWillOwnSubmissions && (
+            <div className="h-full py-4 px-4">
+              The sponsor of this call will own all the rights to the submitted articles.
+            </div>
+          )}
         </section>
       </div>
     </Card>

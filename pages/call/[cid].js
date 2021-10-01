@@ -91,6 +91,7 @@ const Calls = ({ call }) => {
             className="mb-3"
             abstractDeadline={call?.abstractDeadline}
             wordCount={call?.wordCount}
+            sponsorsWillOwnSubmissions={call?.sponsorsWillOwnSubmissions}
           />
 
           <SponsorList className="mb-3" sponsors={call?.sponsors} />

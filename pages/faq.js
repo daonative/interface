@@ -9,6 +9,12 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+const DiscordLink = ({ children }) => (
+  <a target="_blank" href="https://discord.gg/zGk5TSSyjX" className="text-prologe-primary">
+    {children}
+  </a>
+)
+
 const faqs = [
   {
     id: 1,
@@ -25,7 +31,7 @@ const faqs = [
     question: "How can I participate?",
     answer: (
       <ol className="list-decimal list-inside">
-        <li>Join our discord.</li>
+        <li>Join our <DiscordLink>discord</DiscordLink>.</li>
         <li>Introduce yourself in the #intro channel on discord.</li>
         <li>
           Write your article and add the{" "}
@@ -50,7 +56,16 @@ const faqs = [
       </ol>
     ),
   },
-  // More questions...
+  {
+    id: 3,
+    question: "How do I make my article win?",
+    answer: (
+      <div>
+        The easiest way to have your article win is to communicate a lot on <DiscordLink>discord</DiscordLink>.
+        Talk to either @lrnt or @ben about the article you're writing. We'll help you on the right track.
+      </div>
+    )
+  }
 ];
 const Background = () => {
   return (

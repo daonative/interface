@@ -15,6 +15,7 @@ export const callForArticles = [
     wordCount: "800-1200",
     title:
       "NFTs beyond visual art",
+    proposals: [5],
     sponsors: {
       "block0.ch": {
         balance: 0.2,
@@ -209,10 +210,11 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
     valueLocked: "0.020",
     deadline: "2021-10-05",
     sponsors: {
-      prologe: {
-        balance: 0.015,
+      'deficreators.com': {
+        balance: 0.020,
       },
     },
+    proposals: [4],
   },
   {
     id: crypto

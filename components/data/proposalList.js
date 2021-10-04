@@ -55,4 +55,20 @@ export const proposalList = {
     contentURI:
       "https://thoughtful-drifter-b17.notion.site/Crypto-and-the-Unbaked-df41fd0d48194c40bdd01ea057f0821c",
   },
+  4: {
+    answerToCallId: "be3b535184af7e0739e871413b302253fdcfc9d3",
+    createdAt: 1633248480000,
+    image: "/darkrectangle.png",
+    publisherAddress: "0xd5cf4f8BA432e07b5AB0250CE46d9134f3629C16",
+    contentURI:
+      "https://docs.google.com/document/d/1kpVgjS138AgizJlUnHB1Gp0SqSiSL21hWI8DfLEVcrI/edit?usp=sharing",
+  },
+  5: {
+    answerToCallId: "be46d3cb85b391485691dcf6d99d7f7a79d054fb",
+    createdAt: 1633327320000,
+    image: "/noise.png",
+    publisherAddress: "0x30dE69aCCCb59E6c6cc3b2748a5f6f9A27217CF2",
+    contentURI:
+      "https://docs.google.com/document/d/1Rg3YYNMZGrhsUQnkRIFysa6jJ2B5okl9S_ngk2U0jn4/edit?usp=sharing",
+  },
 };

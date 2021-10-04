@@ -11,9 +11,13 @@ export const Answer = ({ article: proposal, id }) => {
       <div className="flex-1 flex flex-col px-2 pt-1 pb-6">
         <div className="flex justify-between mb-2">
           <h3 className="text-sm text-base truncate">
-            <span className="mr-1">Earned</span>
-            <Image width="12" height="12" src="/logo-eth.svg" />
-            <span className="">{proposal.claimable.substr(0, 7)}</span>
+            { proposal.claimable && (
+              <>
+                <span className="mr-1">Earned</span>
+                <Image width="12" height="12" src="/logo-eth.svg" />
+                <span className="">{proposal.claimable}</span>
+              </>
+            )}
           </h3>
         </div>
         <img

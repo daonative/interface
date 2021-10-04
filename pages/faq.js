@@ -65,6 +65,11 @@ const faqs = [
         Talk to either @lrnt or @ben about the article you're writing. We'll help you on the right track.
       </div>
     )
+  },
+  {
+    id: 4,
+    question: 'How long is the abstract?',
+    answer: (<div>There is no minimum length for the abstract. Its only role is to act as a low friction communication medium between prologe & you</div>)
   }
 ];
 const Background = () => {

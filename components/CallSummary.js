@@ -9,7 +9,7 @@ const Deadline = ({ deadline }) => {
       <div className="font-bold h-full border-r-prologe border-prologe-primary border-opacity-25 flex items-center px-4 md:px-8 py-4">
         Deadline
       </div>
-      <div className="ml-3">
+      <div className="ml-3 text-sm">
         {`${deadline.toDateString()} (${moment(deadline).fromNow()})`}
       </div>
     </div>

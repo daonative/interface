@@ -25,7 +25,7 @@ export const CallMeta = ({ abstractDeadline, wordCount, sponsorsWillOwnSubmissio
   return (
     <Card className={`${className}`}>
       <Header className="min-w-max max-w-full w-1/4 py-3">Extra info</Header>
-      <div className="flex flex-col">
+      <div className="flex flex-col text-sm">
         <section className="divide-y divide-opacity-25 divide-prologe-primary">
           <Deadline deadline={new Date(abstractDeadline)} />
           <div className="h-full flex items-center justify-between px-4">

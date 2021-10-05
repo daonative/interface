@@ -25,7 +25,9 @@ export const CallList = () => {
                       <CallSummary
                         title={call.title}
                         currency={call.currency}
-                        valueLocked={getValueLocked(call?.sponsors)}
+                        valueLocked={formatEther(
+                          getValueLocked(call?.sponsors)
+                        )}
                         deadline={call.deadline}
                         cta={call.cta}
                       ></CallSummary>

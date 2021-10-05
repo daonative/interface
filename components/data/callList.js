@@ -4,6 +4,154 @@ export const callForArticles = [
   {
     id: crypto
       .createHash("sha1")
+      .update("Women in DeFi")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "Women in DeFi",
+    sponsors: {
+      "Arjun Chand": {
+        balance: "0.02",
+        currency: "eth",
+      },
+      "Luke's Donut Mind": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "virtual": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "ola_afe": {
+        balance: "0.01",
+        currency: "eth",
+      },
+      "rose8": {
+        balance: "0.01",
+        currency: "eth",
+      },
+    },
+    description: `Put the spotlight on women in DeFi.`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update("Web3 and the future of online communities")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "Web3 and the future of online communities",
+    sponsors: {
+      "virtual": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "davanac": {
+        balance: "0.02",
+        currency: "eth",
+      },
+      "Luke's Donut Mind": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "ola_afe": {
+        balance: "0.01",
+        currency: "eth",
+      },
+    },
+    description: `
+Make a small history about the history of communities. What is a community? How did communities look like before the internet? How did web 1 and web 2 communities look like? And what's different (if anything) about web 3 communities?
+`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update("What remains of the crypto-anarchist spirit?")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "What remains of the crypto-anarchist spirit?",
+    sponsors: {
+      "virtual": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "Emomert": {
+        balance: "0.02",
+        currency: "eth",
+      },
+      "Luke's Donut Mind": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "anhnt4288.near" : {
+        balance: "0.01",
+        currency: "eth",
+      },
+      "rose8": {
+        balance: "0.01",
+        currency: "eth",
+      },
+    },
+    description: `
+Many people say that bitcoin was born out of the crypto anarchist movement and more specifically that its seed were planted in the crypto-anarchist manifesto. But what remains of it today?
+`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update("A comparison of DAOs and anarchist societies")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "A comparison of DAOs and anarchist societies",
+    sponsors: {
+      "virtual": {
+        balance: "0.005",
+        currency: "eth",
+      },
+    },
+    description: `In what sense do DAOs resemble anarchistic societies? In what sense do they not?`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update("A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard",
+    sponsors: {
+      "Luke's Donut Mind": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "anhnt4288.near" : {
+        balance: "0.01",
+        currency: "eth",
+      },
+    },
+    description: `
+David has been very critical of the innovation that stemmed out of crypto. But is it warranted?
+
+[https://www.goodreads.com/en/book/show/35525995-attack-of-the-50-foot-blockchain](https://www.goodreads.com/en/book/show/35525995-attack-of-the-50-foot-blockchain)
+
+It's very important that this article explores the subject from a neutral point of view and steers clear of shilling crypto.
+`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
       .update("NFTs beyond visual art")
       .digest("hex"),
     currency: "eth",
@@ -15,7 +163,7 @@ export const callForArticles = [
     proposals: [5],
     sponsors: {
       "block0.ch": {
-        balance: 0.2,
+        balance: "0.2",
         currency: "eth",
       },
     },
@@ -45,7 +193,7 @@ The author accepts that the article will be published on the Block0 blog.
       "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",
     sponsors: {
       "request.network": {
-        balance: 300,
+        balance: "300",
         currency: "usdc",
       },
     },
@@ -82,7 +230,7 @@ This article must highlight the CSV feature from Request that may be useful for 
     title: "A guide to crypto taxation and compliance in Europe",
     sponsors: {
       "request.network": {
-        balance: 300,
+        balance: "300",
         currency: "usdc",
       },
     },
@@ -119,7 +267,7 @@ The article must also highlight the ability to denominate invoices in fiat while
     title: "Comparing The Best Crypto Wallets for Businesses",
     sponsors: {
       "request.network": {
-        balance: 300,
+        balance: "300",
         currency: "usdc",
       },
     },
@@ -155,7 +303,7 @@ The article will also mention that the Request Invoicing app is listed in Gnosis
     title: "How to make quality crypto content?",
     sponsors: {
       prologe: {
-        balance: 0.2,
+        balance: "0.2",
       },
     },
     sponsorsWillOwnSubmissions: true,
@@ -181,7 +329,7 @@ Your primary focus should be to answer the call. You don't necessarily need to a
     proposals: [2, 3],
     sponsors: {
       prologe: {
-        balance: 0.1,
+        balance: "0.1",
       },
     },
     description: `
@@ -202,7 +350,7 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
     deadline: "2021-10-05",
     sponsors: {
       'deficreators.com': {
-        balance: 0.020,
+        balance: "0.020",
       },
     },
     proposals: [4],
@@ -215,7 +363,7 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
     title: "Censorship resistant information guide",
     sponsors: {
       prologe: {
-        balance: 0.015,
+        balance: "0.015",
       },
     },
     deadline: "2021-11-01",
@@ -232,10 +380,10 @@ At which levels can your article/information on the internet get censored? For e
   {
     sponsors: {
       "0x9890Ec25415912b2D8628C385daCA509650882bD": {
-        balance: 0.07,
+        balance: "0.07",
       },
       "0x69F5Bd7021858C3270A43aD7D719c6164CA6D174": {
-        balance: 0.02,
+        balance: "0.02",
       },
     },
     title: "What is prologe.press?",

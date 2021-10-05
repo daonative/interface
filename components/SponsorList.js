@@ -19,7 +19,7 @@ export const SponsorList = ({ className, sponsors = {} }) => {
     <Card className={`${className}`}>
       <Header className="min-w-max max-w-full w-1/4 py-3">Sponsors</Header>
       <div className="px-4">
-        <ul className="divide-y divide-opacity-25 divide-prologe-primary">
+        <ul className="divide-y divide-opacity-25 divide-prologe-primary text-sm">
           {Object.entries(sponsors).map(([address, sponsorData]) => {
             return (
               <li key={address} className="pt-4 pb-4 flex justify-between">

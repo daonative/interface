@@ -12,6 +12,7 @@ import Link from "next/link";
 import { Navigation } from "../../components/Navigation";
 import { NoiseBackground } from "../../components/NoiseBackground";
 import { getValueLocked } from "../../utils";
+import { formatEther } from "@ethersproject/units";
 
 const Background = () => {
   return (
@@ -70,7 +71,7 @@ const Calls = ({ call }) => {
             <CallSummary
               title={call?.title}
               currency={call?.currency}
-              valueLocked={getValueLocked(call?.sponsors)}
+              valueLocked={formatEther(getValueLocked(call?.sponsors))}
               deadline={call?.deadline}
               cta={call?.cta}
             />

@@ -98,6 +98,10 @@ Make a small history about the history of communities. What is a community? How 
         balance: "0.01",
         currency: "eth",
       },
+      "prologe": {
+        balance: "0.03",
+        currency: "eth",
+      },
     },
     description: `
 Many people say that bitcoin was born out of the crypto anarchist movement and more specifically that its seed were planted in the crypto-anarchist manifesto. But what remains of it today?
@@ -120,6 +124,32 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
       },
     },
     description: `In what sense do DAOs resemble anarchistic societies? In what sense do they not?`,
+  },
+  {
+    id: crypto
+      .createHash("sha1")
+      .update("How can DAOs increase the surface area of participation?")
+      .digest("hex"),
+    currency: "eth",
+    deadline: "2021-10-22",
+    wordCount: "800-1200",
+    title:
+      "How can DAOs increase the surface area of participation?",
+    sponsors: {
+      "virtual": {
+        balance: "0.005",
+        currency: "eth",
+      },
+      "prologe": {
+        balance: "0.03",
+        currency: "eth",
+      },
+    },
+    description: `
+If you're a developer you can just hop on gitcoin and earn crypto while contributing to DAOs but what happens if you don't know how to code?
+
+Explore how people can participate in DAOs currently and how we could increase the surface area of participation.
+`,
   },
   {
     id: crypto

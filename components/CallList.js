@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Card } from "./Card";
 import { CallSummary } from "./CallSummary";
 import { callForArticles } from "./data/callList";
+import { getValueLocked } from "../utils";
 
 export const CallList = () => {
   return (
@@ -24,7 +25,7 @@ export const CallList = () => {
                       <CallSummary
                         title={call.title}
                         currency={call.currency}
-                        valueLocked={call.valueLocked}
+                        valueLocked={getValueLocked(call?.sponsors)}
                         deadline={call.deadline}
                         cta={call.cta}
                       ></CallSummary>

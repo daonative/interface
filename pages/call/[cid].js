@@ -11,6 +11,7 @@ import { CallMeta } from "../../components/CallMeta";
 import Link from "next/link";
 import { Navigation } from "../../components/Navigation";
 import { NoiseBackground } from "../../components/NoiseBackground";
+import { getValueLocked } from "../../utils";
 
 const Background = () => {
   return (
@@ -69,7 +70,7 @@ const Calls = ({ call }) => {
             <CallSummary
               title={call?.title}
               currency={call?.currency}
-              valueLocked={call?.valueLocked}
+              valueLocked={getValueLocked(call?.sponsors)}
               deadline={call?.deadline}
               cta={call?.cta}
             />

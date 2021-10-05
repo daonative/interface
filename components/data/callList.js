@@ -4,11 +4,8 @@ export const callForArticles = [
   {
     id: crypto
       .createHash("sha1")
-      .update(
-        "NFTs beyond visual art"
-      )
+      .update("NFTs beyond visual art")
       .digest("hex"),
-    valueLocked: 0.2,
     currency: "eth",
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-22",
@@ -40,7 +37,6 @@ The author accepts that the article will be published on the Block0 blog.
         "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks"
       )
       .digest("hex"),
-    valueLocked: 300,
     currency: "usdc",
     abstractDeadline: "2021-10-05",
     deadline: "2021-10-08",
@@ -79,7 +75,6 @@ This article must highlight the CSV feature from Request that may be useful for 
       .createHash("sha1")
       .update("A guide to crypto taxation and compliance in Europe")
       .digest("hex"),
-    valueLocked: 300,
     currency: "usdc",
     abstractDeadline: "2021-10-05",
     deadline: "2021-10-08",
@@ -117,7 +112,6 @@ The article must also highlight the ability to denominate invoices in fiat while
       .createHash("sha1")
       .update("Comparing The Best Crypto Wallets for Businesses")
       .digest("hex"),
-    valueLocked: 300,
     currency: "usdc",
     abstractDeadline: "2021-10-05",
     deadline: "2021-10-08",
@@ -155,7 +149,6 @@ The article will also mention that the Request Invoicing app is listed in Gnosis
       .createHash("sha1")
       .update("How to make quality crypto content?")
       .digest("hex"),
-    valueLocked: 0.2,
     deadline: "2021-11-01",
     abstractDeadline: "2021-10-15",
     wordCount: "250 - 1000",
@@ -198,7 +191,6 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
 *   What are the missing pieces to enable the unbanked to take part in the new world economy?
 *   What are the most interesting projects tackling this issue?
 `,
-    valueLocked: 0.1,
     deadline: "2021-09-22",
   },
   {
@@ -207,7 +199,6 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
       .update("Top 100 DeFi projects + mapping")
       .digest("hex"),
     title: "Top 100 DeFi projects + mapping",
-    valueLocked: "0.020",
     deadline: "2021-10-05",
     sponsors: {
       'deficreators.com': {
@@ -227,7 +218,6 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
         balance: 0.015,
       },
     },
-    valueLocked: "0.1",
     deadline: "2021-11-01",
     abstractDeadline: "2021-10-15",
     description: `
@@ -253,7 +243,6 @@ At which levels can your article/information on the internet get censored? For e
       .createHash("sha1")
       .update("What is prologe.press`?")
       .digest("hex"),
-    valueLocked: 0.027,
     deadline: "2021-08-21",
     proposals: [0, 1],
     description: `

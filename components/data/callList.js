@@ -7,8 +7,9 @@ export const callForArticles = [
       .update("Women in DeFi")
       .digest("hex"),
     currency: "eth",
+    abstractDeadline: "2021-10-15",
     deadline: "2021-10-22",
-    wordCount: "800-1200",
+    wordCount: "800+",
     title:
       "Women in DeFi",
     sponsors: {
@@ -41,8 +42,9 @@ export const callForArticles = [
       .update("Web3 and the future of online communities")
       .digest("hex"),
     currency: "eth",
-    deadline: "2021-10-22",
-    wordCount: "800-1200",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-31",
+    wordCount: "800+",
     title:
       "Web3 and the future of online communities",
     sponsors: {
@@ -73,8 +75,9 @@ Make a small history about the history of communities. What is a community? How 
       .update("What remains of the crypto-anarchist spirit?")
       .digest("hex"),
     currency: "eth",
-    deadline: "2021-10-22",
-    wordCount: "800-1200",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-31",
+    wordCount: "800+",
     title:
       "What remains of the crypto-anarchist spirit?",
     sponsors: {
@@ -113,8 +116,9 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
       .update("A comparison of DAOs and anarchist societies")
       .digest("hex"),
     currency: "eth",
-    deadline: "2021-10-22",
-    wordCount: "800-1200",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-31",
+    wordCount: "800+",
     title:
       "A comparison of DAOs and anarchist societies",
     sponsors: {
@@ -131,8 +135,9 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
       .update("How can DAOs increase the surface area of participation?")
       .digest("hex"),
     currency: "eth",
-    deadline: "2021-10-22",
-    wordCount: "800-1200",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-31",
+    wordCount: "800+",
     title:
       "How can DAOs increase the surface area of participation?",
     sponsors: {
@@ -157,8 +162,9 @@ Explore how people can participate in DAOs currently and how we could increase t
       .update("A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard")
       .digest("hex"),
     currency: "eth",
-    deadline: "2021-10-22",
-    wordCount: "800-1200",
+    abstractDeadline: "2021-10-15",
+    deadline: "2021-10-31",
+    wordCount: "800+",
     title:
       "A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard",
     sponsors: {

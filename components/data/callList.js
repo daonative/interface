@@ -64,6 +64,10 @@ export const callForArticles = [
         balance: "0.01",
         currency: "eth",
       },
+      "Evgeny": {
+        balance: "0.01",
+        currency: "eth",
+      },
     },
     description: `
 Make a small history about the history of communities. What is a community? How did communities look like before the internet? How did web 1 and web 2 communities look like? And what's different (if anything) about web 3 communities?
@@ -141,8 +145,8 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
     title:
       "How can DAOs increase the surface area of participation?",
     sponsors: {
-      "virtual": {
-        balance: "0.005",
+      "Evgeny": {
+        balance: "0.01",
         currency: "eth",
       },
       "prologe": {

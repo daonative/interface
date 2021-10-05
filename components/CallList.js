@@ -4,6 +4,7 @@ import { Card } from "./Card";
 import { CallSummary } from "./CallSummary";
 import { callForArticles } from "./data/callList";
 import { getValueLocked } from "../utils";
+import { formatEther } from "@ethersproject/units";
 
 export const CallList = () => {
   return (

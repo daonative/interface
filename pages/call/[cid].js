@@ -76,7 +76,9 @@ const Calls = ({ call }) => {
               cta={call?.cta}
             />
           </Card>
-
+          {!isInThePast(call?.deadline) && (
+            <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
+          )}
           <CallDescription className="mb-3" description={call?.description} />
           <AnswerList
             className="mb-3"
@@ -86,9 +88,6 @@ const Calls = ({ call }) => {
           />
         </div>
         <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
-          {!isInThePast(call?.deadline) && (
-            <SubmitArticleForm className="mb-3" id={cid} title={call?.title} />
-          )}
           <CallMeta
             className="mb-3"
             abstractDeadline={call?.abstractDeadline}

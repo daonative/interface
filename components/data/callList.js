@@ -2,16 +2,12 @@ const crypto = require("crypto");
 
 export const callForArticles = [
   {
-    id: crypto
-      .createHash("sha1")
-      .update("Women in DeFi")
-      .digest("hex"),
+    id: crypto.createHash("sha1").update("Women in DeFi").digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-22",
     wordCount: "800+",
-    title:
-      "Women in DeFi",
+    title: "Women in DeFi",
     sponsors: {
       "Arjun Chand": {
         balance: "0.02",
@@ -21,15 +17,15 @@ export const callForArticles = [
         balance: "0.005",
         currency: "eth",
       },
-      "virtual": {
+      virtual: {
         balance: "0.005",
         currency: "eth",
       },
-      "ola_afe": {
+      ola_afe: {
         balance: "0.01",
         currency: "eth",
       },
-      "rose8": {
+      rose8: {
         balance: "0.01",
         currency: "eth",
       },
@@ -43,16 +39,16 @@ export const callForArticles = [
       .digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
+    created: "2021-10-05",
     deadline: "2021-10-31",
     wordCount: "800+",
-    title:
-      "Web3 and the future of online communities",
+    title: "Web3 and the future of online communities",
     sponsors: {
-      "virtual": {
+      virtual: {
         balance: "0.005",
         currency: "eth",
       },
-      "davanac": {
+      davanac: {
         balance: "0.02",
         currency: "eth",
       },
@@ -60,11 +56,11 @@ export const callForArticles = [
         balance: "0.005",
         currency: "eth",
       },
-      "ola_afe": {
+      ola_afe: {
         balance: "0.01",
         currency: "eth",
       },
-      "Evgeny": {
+      Evgeny: {
         balance: "0.01",
         currency: "eth",
       },
@@ -82,14 +78,13 @@ Make a small history about the history of communities. What is a community? How 
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-31",
     wordCount: "800+",
-    title:
-      "What remains of the crypto-anarchist spirit?",
+    title: "What remains of the crypto-anarchist spirit?",
     sponsors: {
-      "virtual": {
+      virtual: {
         balance: "0.005",
         currency: "eth",
       },
-      "Emomert": {
+      Emomert: {
         balance: "0.02",
         currency: "eth",
       },
@@ -97,15 +92,15 @@ Make a small history about the history of communities. What is a community? How 
         balance: "0.005",
         currency: "eth",
       },
-      "anhnt4288.near" : {
+      "anhnt4288.near": {
         balance: "0.01",
         currency: "eth",
       },
-      "rose8": {
+      rose8: {
         balance: "0.01",
         currency: "eth",
       },
-      "prologe": {
+      prologe: {
         balance: "0.03",
         currency: "eth",
       },
@@ -123,10 +118,9 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-31",
     wordCount: "800+",
-    title:
-      "A comparison of DAOs and anarchist societies",
+    title: "A comparison of DAOs and anarchist societies",
     sponsors: {
-      "virtual": {
+      virtual: {
         balance: "0.005",
         currency: "eth",
       },
@@ -142,14 +136,13 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-31",
     wordCount: "800+",
-    title:
-      "How can DAOs increase the surface area of participation?",
+    title: "How can DAOs increase the surface area of participation?",
     sponsors: {
-      "Evgeny": {
+      Evgeny: {
         balance: "0.01",
         currency: "eth",
       },
-      "prologe": {
+      prologe: {
         balance: "0.03",
         currency: "eth",
       },
@@ -163,7 +156,9 @@ Explore how people can participate in DAOs currently and how we could increase t
   {
     id: crypto
       .createHash("sha1")
-      .update("A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard")
+      .update(
+        "A critical overview of Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts by David Gerard"
+      )
       .digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
@@ -176,7 +171,7 @@ Explore how people can participate in DAOs currently and how we could increase t
         balance: "0.005",
         currency: "eth",
       },
-      "anhnt4288.near" : {
+      "anhnt4288.near": {
         balance: "0.01",
         currency: "eth",
       },
@@ -198,8 +193,7 @@ It's very important that this article explores the subject from a neutral point 
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-22",
     wordCount: "800-1200",
-    title:
-      "NFTs beyond visual art",
+    title: "NFTs beyond visual art",
     proposals: [5],
     sponsors: {
       "block0.ch": {
@@ -389,7 +383,7 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
     title: "Top 100 DeFi projects + mapping",
     deadline: "2021-10-05",
     sponsors: {
-      'deficreators.com': {
+      "deficreators.com": {
         balance: "0.020",
       },
     },

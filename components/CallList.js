@@ -30,7 +30,6 @@ export const CallList = () => {
                           getValueLocked(call?.sponsors)
                         )}
                         deadline={call.deadline}
-                        cta={call.cta}
                       ></CallSummary>
                     </div>
                   </li>

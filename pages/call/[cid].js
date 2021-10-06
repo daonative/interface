@@ -13,6 +13,8 @@ import { Navigation } from "../../components/Navigation";
 import { NoiseBackground } from "../../components/NoiseBackground";
 import { getValueLocked } from "../../utils";
 import { formatEther } from "@ethersproject/units";
+import { CallStatus } from "../../components/CallStatus";
+import { DateTime } from "luxon";
 
 const Background = () => {
   return (
@@ -87,15 +89,15 @@ const Calls = ({ call }) => {
             )}
           />
         </div>
-        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8">
+        <div className="md:col-start-13 md:col-end-17 px-0 md:px-8 flex flex-col gap-3">
+          <CallStatus created={call?.created} deadline={call?.deadline} />
           <CallMeta
-            className="mb-3"
             abstractDeadline={call?.abstractDeadline}
             wordCount={call?.wordCount}
             sponsorsWillOwnSubmissions={call?.sponsorsWillOwnSubmissions}
           />
 
-          <SponsorList className="mb-3" sponsors={call?.sponsors} />
+          <SponsorList sponsors={call?.sponsors} />
         </div>
       </div>
     </>

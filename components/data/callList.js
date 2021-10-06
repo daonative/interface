@@ -5,6 +5,7 @@ export const callForArticles = [
     id: crypto.createHash("sha1").update("Women in DeFi").digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
+    created: "2021-10-05",
     deadline: "2021-10-22",
     wordCount: "800+",
     title: "Women in DeFi",
@@ -75,6 +76,7 @@ Make a small history about the history of communities. What is a community? How 
       .update("What remains of the crypto-anarchist spirit?")
       .digest("hex"),
     currency: "eth",
+    created: "2021-10-05",
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-31",
     wordCount: "800+",
@@ -117,6 +119,7 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
     currency: "eth",
     abstractDeadline: "2021-10-15",
     deadline: "2021-10-31",
+    created: "2021-10-05",
     wordCount: "800+",
     title: "A comparison of DAOs and anarchist societies",
     sponsors: {
@@ -134,6 +137,7 @@ Many people say that bitcoin was born out of the crypto anarchist movement and m
       .digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
+    created: "2021-10-05",
     deadline: "2021-10-31",
     wordCount: "800+",
     title: "How can DAOs increase the surface area of participation?",
@@ -162,6 +166,7 @@ Explore how people can participate in DAOs currently and how we could increase t
       .digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
+    created: "2021-10-05",
     deadline: "2021-10-31",
     wordCount: "800+",
     title:
@@ -191,6 +196,7 @@ It's very important that this article explores the subject from a neutral point 
       .digest("hex"),
     currency: "eth",
     abstractDeadline: "2021-10-15",
+    created: "2021-10-05",
     deadline: "2021-10-22",
     wordCount: "800-1200",
     title: "NFTs beyond visual art",
@@ -220,6 +226,7 @@ The author accepts that the article will be published on the Block0 blog.
       )
       .digest("hex"),
     currency: "usdc",
+    created: "2021-10-05",
     abstractDeadline: "2021-10-05",
     deadline: "2021-10-08",
     wordCount: "1000+",
@@ -381,6 +388,7 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
       .update("Top 100 DeFi projects + mapping")
       .digest("hex"),
     title: "Top 100 DeFi projects + mapping",
+    created: "2021-09-01",
     deadline: "2021-10-05",
     sponsors: {
       "deficreators.com": {
@@ -395,6 +403,7 @@ Crypto has long been pretending to bank the unbanked. It would be nice to see an
       .update("Censorship resistant information guide")
       .digest("hex"),
     title: "Censorship resistant information guide",
+
     sponsors: {
       prologe: {
         balance: "0.015",
@@ -425,6 +434,8 @@ At which levels can your article/information on the internet get censored? For e
       .createHash("sha1")
       .update("What is prologe.press`?")
       .digest("hex"),
+
+    created: "2021-08-15",
     deadline: "2021-08-21",
     proposals: [0, 1],
     description: `

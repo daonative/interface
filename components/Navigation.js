@@ -1,7 +1,5 @@
 import Link from "next/link";
-import A from "./A";
 import { AnimatedLogo } from "./AnimatedLogo";
-import Button from "./Button";
 
 export function Navigation() {
   return (
@@ -25,13 +23,13 @@ export function Navigation() {
           <a className="text-lg">about</a>
         </Link>
 
-        <A
-          className="bluebar md:hidden"
+        <a
+          className="bluebar text-lg w-max flex relative"
           target="_blank"
           href="https://discord.gg/rf837mkdBW"
         >
           join our discord
-        </A>
+        </a>
       </div>
     </nav>
   );

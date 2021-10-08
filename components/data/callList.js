@@ -228,7 +228,7 @@ The author accepts that the article will be published on the Block0 blog.
     currency: "usdc",
     created: "2021-10-05",
     abstractDeadline: "2021-10-05",
-    deadline: "2021-10-08",
+    deadline: "2021-10-15",
     wordCount: "1000+",
     title:
       "Top 3 Crypto Accounting Solutions for Businesses Using Xero or Quickbooks",

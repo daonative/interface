@@ -69,7 +69,7 @@ export const CallStatus = ({ className, created, deadline }) => {
             <Round
               name={"Voting Round"}
               start={DateTime.fromISO(deadline)}
-              end={DateTime.fromISO(deadline).plus({ days: 2 })}
+              end={DateTime.fromISO(deadline).plus({ days: 10 })}
             />
           </ol>
         </nav>

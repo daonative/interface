@@ -197,7 +197,7 @@ It's very important that this article explores the subject from a neutral point 
     currency: "eth",
     abstractDeadline: "2021-10-15",
     created: "2021-10-05",
-    deadline: "2021-10-22",
+    deadline: "2021-10-26",
     wordCount: "800-1200",
     title: "NFTs beyond visual art",
     proposals: [5],

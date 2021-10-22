@@ -30,6 +30,11 @@ export const callForArticles = [
         balance: "0.01",
         currency: "eth",
       },
+      {
+      hotkartoffel: {
+        balance: "0.025",
+        currency: "eth",    
+      },
     },
     description: `Put the spotlight on women in DeFi.`,
   },

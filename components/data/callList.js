@@ -6,7 +6,7 @@ export const callForArticles = [
     currency: "eth",
     abstractDeadline: "2021-10-15",
     created: "2021-10-05",
-    deadline: "2021-10-22",
+    deadline: "2021-10-29",
     wordCount: "800+",
     title: "Women in DeFi",
     sponsors: {

@@ -6,7 +6,7 @@ export const callForArticles = [
     currency: "eth",
     abstractDeadline: "2021-10-15",
     created: "2021-10-05",
-    deadline: "2021-10-29",
+    deadline: "2021-10-22",
     wordCount: "800+",
     title: "Women in DeFi",
     sponsors: {
@@ -29,11 +29,6 @@ export const callForArticles = [
       rose8: {
         balance: "0.01",
         currency: "eth",
-      },
-      {
-      hotkartoffel: {
-        balance: "0.025",
-        currency: "eth",    
       },
     },
     description: `Put the spotlight on women in DeFi.`,

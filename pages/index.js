@@ -28,38 +28,9 @@ export const Headline = () => {
         className="mb-6"
         style={{ fontFamily: "Space Grotesk", fontWeight: 600 }}
       >
-        Get paid to write about crypto
-        <span className="text-sm absolute text-red-500 font-normal">
-          closed beta
-        </span>
+        prologe.press is now <a className="underline bluebar" href="https://newsroom.xyz">newsroom</a>
         <br />
       </H1>
-      <H2 className="mb-2">Let's change the way information gets funded.</H2>
-      <H2>
-        <span className="font-bold mb-2">{`How it works`}</span>
-        <ol className="list-decimal list-inside">
-          <>
-            <li>Browse calls for articles</li>
-            <li>
-              Publish it on <i>any</i> platform
-            </li>
-            <li>Submit a link to your article on prologe</li>
-            <li>Earn crypto proportional to votes and locked value </li>
-          </>
-        </ol>
-      </H2>
-      <div className="flex">
-        <a target="_blank" href="https://discord.gg/zGk5TSSyjX">
-          <Button className="mt-6">Get Early Access</Button>
-        </a>
-        <Link href="/faq">
-          <a>
-            <Button variant="outline" className="mt-6 ml-3">
-              FAQ
-            </Button>
-          </a>
-        </Link>
-      </div>
     </StyledMain>
   );
 };
@@ -74,9 +45,8 @@ export default function Home() {
       {
         // LeftPane
       }
-      <section className="h-full md:fixed md:max-w-1/2 z-20 overflow-hidden relative">
+      <section className="h-full w-full md:fixed z-20 overflow-hidden relative">
         <Gradient />
-
         <div className="relative h-full grid md:grid-cols-12">
           <div
             className={`md:col-start-2 md:col-end-12 h-full pt-3 py-6 md:py-6 md:py-14 px-4 md:px-0 `}
@@ -87,12 +57,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      {
-        // Right Pane
-      }
-      <section className="md:max-w-1/2 md:ml-auto flex justify-center z-60 md:min-h-full overflow-auto bg-prologe-white ">
-        <CallList />
       </section>
     </>
   );

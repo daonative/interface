@@ -71,6 +71,11 @@ const faqs = [
     question: 'How long is the abstract?',
     answer: (<div>There is no minimum length for the abstract. Its only role is to act as a low friction communication medium between prologe & you</div>)
   }
+  {
+    id: 5,
+    question: 'How does voting work?',
+    answer: (<div>Each user in the closed beta gets 0.02 ETH of voting power to allocate to various call proposals. Your voting weight gets distributed as per the amount of calls you vote for, so as you vote for more calls your voting weight gets diluted. You may vote for your own call or someone elses.</div>)
+  }
 ];
 const Background = () => {
   return (
